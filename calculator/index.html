@@ -2,41 +2,43 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="index.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	</head>
 
 	<body>
-		<div class="calc">
-		<table>
+		<div class="calc"> 
+			<table id="calcTable">
 			<tr> 
-				<td id="disp" colspan="4" class="calcDisplay">0</td>
+				<td id="disp" colspan="5">0</td>
 			</tr>	
 			<tr>
-				<td id="button7">7</td>
-				<td id="button8">8</td>
-				<td id="button9">9</td>
+				<td id="button7" class="num">7</td>
+				<td id="button8" class="num">8</td>
+				<td id="button9" class="num">9</td>
 				<td id="buttonDiv">/</td>
+				<td id="enter" rowspan="4">=</td>
 			</tr>
 			<tr>
-				<td id="button4">4</td>
-				<td id="button5">5</td>
-				<td id="button6">6</td>
+				<td id="button4" class="num">4</td>
+				<td id="button5" class="num">5</td>
+				<td id="button6" class="num">6</td>
 				<td id="buttonX">x</td>
 			</tr>
 			<tr>
-				<td id="button1">1</td>
-				<td id="button2">2</td>
-				<td id="button3">3</td>
+				<td id="button1" class="num">1</td>
+				<td id="button2" class="num">2</td>
+				<td id="button3" class="num">3</td>
 				<td id="buttonSub">-</td>
 			</tr>
 			<tr>
-				<td id="buttonC">C</td>
-				<td id="button0">0</td>
-				<td id="buttonDot">.</td>
+				<td id="buttonC" class="num">c</td>
+				<td id="button0" class="num">0</td>
+				<td id="buttonDot" class="num">.</td>
 				<td id="buttonAdd">+</td>
 			</tr>
 
 		</table>
-		<button id="enter" class="submit">=</button></div>
+		</div>
 		<script src="index.js"></script>
 	</body>
 

@@ -1,34 +1,64 @@
-table tr td {
-	border: 1px solid black;
-	font-size: 100px;
-	padding: 20px;
-	cursor: pointer;
-	background: #ffdd00;
+* {
+	box-sizing: border-box;
 }
 
-table {
-	border-collapse: collapse;
-	text-align: center;
-	
+body {
+	background: #000000;
+	font-family: sans-serif;
+	font-size: 80px;
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		font-size: 40px;
+	}
 }
 
 .calc {
-	display: flex;
-	justify-content: center;
+	width: 100%;
 }
 
-.submit {
-	display: flex;
-	justify-content: flex-end;
-	padding: 20px;
-	font-size: 100px;
-
+.calc table {
+	width: 100%;
+	border: solid 10px #bbbbbb;
 }
 
-.calcDisplay {
-	border: 1px solid black;
-	font-size: 100px;
-	padding 20px;
-	background: #999999;
+.calc table td {
+	border: 5px solid black;
+	font-size: 100%;
+	cursor: pointer;
+	border-collapse: collapse;
+	text-align: center;
+	background: #ffaa33;
+	width: 20%;
+	padding: 1.5%;
+}
+
+.calc table tr {
+	line-height: 150%;
+}
+#enter {
+	width: 10%;
+}
+
+table td:hover {
+	border: 5px solid white;
+}
+
+.calc .num {
+	background: #ffff00;
+}
+
+#disp:hover {
+	border: 5px solid black;
+}
+
+#disp {
+	border: 5px solid black;
+	font-size: 100%;
+	background: #bbbbbb;
 	text-align: right;
+	cursor: default;
 }
+
+
