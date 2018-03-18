@@ -8,31 +8,44 @@ var operators = {
 
 var digits = [0,1,2,3,4,5,6,7,8,9];
 
-calculatorData = {
+var calculatorData = {
 	currentFloat: 0,
 	currentFloatArray: [],
+	// called as user types in number to screen
 	buildCurrentFloat: function (digit) {
-		this.currentFloatArray.push(digit);
-		this.setCurrentFloat(this.currentFloatArray.join(''));
+		// Prevent more than a single decimal point occurring in array
+		if (this.currentFloatArray.includes('.') && digit === '.') {
+			return;
+		} else {
+			this.currentFloatArray.push(digit);
+			console.log(this.currentFloatArray);
+			this.setCurrentFloat(this.currentFloatArray.join(''));
+		}
 	},
+	// sets the current number and displays it on page
 	setCurrentFloat: function (number) {
 		this.currentFloat = number;
-		this.currentFloatArray = [number];
+		this.currentFloatArray = number.toString().split("");
 		document.getElementById('disp').innerHTML = this.currentFloat;
 	},
+	// the sequence is the specific set of mathematical operations and numbers typed in by the user, which is evaluated later
 	sequence: [],
+	// place the next number into the sequence
 	insertCurrentFloat: function () {
 		this.sequence.push(this.currentFloat);
 	},
+	// place an operator (+, -, *, /) into the sequence
 	insertOp: function (operator) {
 		this.sequence.push(operator)
 	},
+	//evaluate the sequence, round answer and display on page. Reset sequence to begin with current answer.
 	evaluate: function () {
 		var calcString = this.sequence.join('');
 		var answer = Math.round(eval(calcString) * Math.pow(10, 4)) / Math.pow(10, 4);;
 		this.setCurrentFloat(answer);
 		this.sequence = [answer];
 	},
+	// clear the sequence (when user clears it)
 	clearSeq: function () {
 		this.sequence = [];
 	}
