@@ -1,4 +1,11 @@
 <?php
+	require __DIR__ . '/vendor/autoload.php';
+
+	// set env variables from .env file
+	$dotenv = new Dotenv\Dotenv(__DIR__);
+	$dotenv->load();
+	
+	// load env variables
 	$API_KEY = getenv("GCAL_API_KEY");
 	$calendarID = getenv("GCAL_ID");
 	$timeZone = getenv("GCAL_TIMEZONE");
