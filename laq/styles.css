@@ -18,6 +18,7 @@
  * Section 1: Global themes
  */
 
+
 * {
 	box-sizing: border-box;
 	}
@@ -36,16 +37,6 @@ body {
 	}
 
 
-.cts-main-content {
-	width: 50%;
-	display: inline-block;
-	margin-top: 220px;
-	margin-left: 5%;
-	margin-right: auto;
-	font-family: 'Libre Baskerville', serif;
-	letter-spacing: 0.01em;
-	line-height: 150%;
-}
 
 /* 
  * Section 2: Navigation
@@ -54,20 +45,26 @@ body {
 
 .cts-navbar {
 	position: fixed;
-	background-color: #000000;
+	display: flex;
+	justify-content; flex-start;
+	flex-wrap: nowrap;
+	align-items: center;
+	overflow: hidden;
+	background: linear-gradient(#222222, #000000);
 	width: 100%;
 	top: 0;
-	line-height: 100%;
-	padding: 5px;
+	height: 100px;
+	padding: 0px;
 	font-family: 'Mr Dafoe', cursive;
 	}
 
 .cts-navbar__main-list {
 	list-style-type: none;
 	float: left;
+	overflow: hidden;
 	font-size: 120%;
-	display: inline;
-	margin-bottom: 30px;
+	display: inline-block;
+	height: 60px;
 	color: #ffffff;
 	text-decoration: none;
 }
@@ -77,8 +74,40 @@ body {
 	border-bottom: solid 3px transparent;
 	border-radius: 0;
 	margin-right: 15px;
-	padding: 12px;
+	padding: 10px;
 	transition: border 500ms;
+}
+
+#hamburger {
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+	.cts-navbar {
+		justify-content: center;
+	}
+	.cts-navbar__main-list {
+		display: none;
+	}
+
+	body {
+		background-size: 100%;
+		
+	}
+	#cts-home-button {
+		display: block;
+		width: 100%;
+		text-align: right;
+		float: none;
+	}
+
+	#hamburger {
+		display: none;
+		position: fixed;
+		right: 5%;
+		top: 5%;
+		font-size: 150%;
+	}
 }
 
 .cts-navbar__main-list li a {
@@ -93,16 +122,19 @@ body {
 
 #cts-home-button {
 	display: inline-block;
+	height: 50px;
+	width: 350px;
+	white-space: nowrap;
+	background-color: transparent;
 	text-decoration: none;
 	color: #ffffff;
 	float: left;
 	letter-spacing: 0.1em;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	line-height: 75%;
+	margin: 15px;
 	font-family: 'Mr Dafoe', cursive;
 	font-size: 150%;
 	font-weight: 400;
-	width: 400px;
 	text-align: center;
 	transform: rotate(-3deg);
 	transition: font-size 500ms;
@@ -113,9 +145,25 @@ body {
 	transition: font-size 500ms;
 }
 
+@media only screen and (max-width: 480px) {
+	.cts-navbar {
+		height: 70px;
+	}
+	#cts-home-button {
+		font-size: 110%;
+	}
+	#cts-home-button:hover {
+	font-size: 110%;
+	}
+	#hamburger {
+		font-size: 130%;
+	}
+
+}
+
 .cts-page-title {
 	position: fixed;
-	display: block;
+	display: none;
 	width: 50%;
 	text-align: left;
 	font-family: 'Libre Baskerville', serif;
@@ -128,12 +176,44 @@ body {
 	line-height: 200%;
 }
 
+@media only screen and (max-width: 1000px) {
+	.cts-page-title {
+		display: none;
+	}
+
+
+}
+
+.cts-main-content {
+	width: 45%;
+	display: flex;
+	margin-top: 220px;
+	margin-left: 5%;
+	margin-right: auto;
+	font-family: 'Libre Baskerville', serif;
+	letter-spacing: 0.01em;
+	line-height: 150%;
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		background-size: 100%;
+	}
+	.cts-main-content {
+		width: 100%;
+		padding: 10px;
+		margin: 0;
+		margin-top: 120px;
+
+	}
+}
+
 /*
  * Section 3: Schedule list layout
  */
 
 #php-schedule {
-	width: 90%;
+	width: 100%;
 	font-size: 80%;
 }
 
