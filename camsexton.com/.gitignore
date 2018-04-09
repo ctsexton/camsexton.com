@@ -1,0 +1,4 @@
+start_server
+composer.phar
+vendor/
+compilation_cache/

@@ -1,5 +1,5 @@
 <?php
-	require __DIR__ . '/vendor/autoload.php';
+	require_once __DIR__ . '/vendor/autoload.php';
 
 	// set env variables from .env file
 	$dotenv = new Dotenv\Dotenv(__DIR__);
