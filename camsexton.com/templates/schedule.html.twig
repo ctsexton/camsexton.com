@@ -1,5 +1,21 @@
 {% extends './base.html.twig' %}
 
 {% block cts_main_content %}
-	This is my schedule page:
+	<div class="cts-page-title">
+		Upcoming Events
+	</div>
+	<div class="cts-main-content_section">
+		<ul id="php-schedule">
+			{% for item in schedule %}
+				<li>
+					<div class='php-gCal__title'>{{ item.gigTitle }}</div>
+					<div class='php-gCal__details'>
+						{{ item.date_time }} <br>
+						{{ item.venue }} <br>
+						{{ item.desc }} 
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
 {% endblock %}

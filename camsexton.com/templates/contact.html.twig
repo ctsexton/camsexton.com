@@ -1,5 +1,18 @@
 {% extends './base.html.twig' %}
 
 {% block cts_main_content %}
-	This is my contact page:
+	<div class="cts-page-title">
+		Complaints
+	</div>
+	<div class="cts-main-content_section">
+		<form>
+			Your Name:<br>
+			<input type="text" name="name" size="40" autofocus><br>
+			Email:<br>
+			<input type="text" name="email" size="40"><br>
+			Message:<br>
+			<textarea name="message" cols="50" rows="10"></textarea><br>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
 {% endblock %}

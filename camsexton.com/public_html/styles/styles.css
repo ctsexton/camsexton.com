@@ -40,6 +40,26 @@ hr {
     padding: 0;
 }
 
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: black;
+}
+
+form {
+	font-size: 100%;
+	line-height: 200%;
+}
+form input, textarea, button {
+	line-height: 200%;
+	font-size: 100%;
+}
 
 /* 
  * Section 2: Navigation
@@ -66,7 +86,7 @@ hr {
 	list-style-type: none;
 	background-color: transparent;
 	overflow: hidden;
-	font-size: 75%;
+	font-size: 65%;
 	line-height: 100%;
 	display: flex;
 	justify-content: flex-start;
@@ -74,15 +94,20 @@ hr {
 	align-items: center;
 	color: #ffffff;
 	text-decoration: none;
+	font-family: 'Raleway', sans-serif;
 }
 
 .cts-navbar__main-list li {
 	display: inline-block;
 	border: solid 3px transparent;
 	border-radius: 3px;
-	padding: 5px;	
 	margin-right: 15px;
 	transition: border 500ms;
+}
+
+.cts-navbar__main-list a {
+	display: inline-block;
+	padding: 10px;
 }
 
 #hamburger {
@@ -108,7 +133,6 @@ hr {
 }
 
 .cts-navbar__main-list li a {
-	text-decoration: none;
 	color: #ffffff;
 }
 
@@ -148,22 +172,17 @@ hr {
 	}
 
 }
-
+i*/
 .cts-page-title {
-	position: fixed;
-	display: none;
-	width: 50%;
-	text-align: left;
-	font-family: 'Libre Baskerville', serif;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 200%;
 	color: #ffffff;
-	background: linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
-	margin-top: 100px;
 	padding-top: 10px;
 	padding-bottom: 50px;
-	text-indent: 10%;
 	line-height: 200%;
 }
-
+/*
 @media only screen and (max-width: 600px) {
 	.cts-page-title {
 		display: none;
@@ -173,14 +192,22 @@ hr {
 }
 */
 .cts-main-content {
-	width: 100%;
+	width: 50%;
 	display: flex;
 	justify-content: center;
-	padding-top: 25%;
+	flex-direction: column;
+	text-align: center;
+	padding-top: 5%;
+	margin-left: 25%;
 	font-family: 'Raleway', sans-serif;
 	letter-spacing: 0.01em;
 	line-height: 100%;
-	font-size: 100%;
+}
+
+.cts-main-content_section {
+	width: 100%;
+	font-size: 80%;
+	text-align: left;
 }
 /*
 @media only screen and (max-width: 600px) {
@@ -207,7 +234,7 @@ hr {
 
 #php-schedule li {
 	text-align: left;
-	background-color: rgba(200,200,200,0.2);
+	background-color: rgba(0,0,0,0.6);
 	margin-top: 3%;
 	line-height: 150%;
 	padding: 20px;
