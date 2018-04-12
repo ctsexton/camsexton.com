@@ -10,6 +10,10 @@
 		'schedule' => 'schedule.php',
 		'home' => 'index.php',
 		'contact' => 'contact.php',
-		'about' => 'about.php'
+		'about' => 'about.php',
+		'web' => 'web.php',
+		'instruments' => 'instruments.php',
+		'teaching' => 'https://www.musicteacher.com.au/cameron-sexton/drum-lessons/',
+		'disco' => 'disco.php'
 	);
 ?>
