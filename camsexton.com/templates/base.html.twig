@@ -13,18 +13,17 @@
 				<ul class="cts-navbar__main-list">
 					<li><a href="{{ navlinks.about }}">about</a></li>
 					<li><a href="{{ navlinks.schedule }}">schedule</a></li>
-					<li>work
-						<ul style="display: none">
-							<li>web</li>
-							<li>music</li>
-							<li>instruments</li>
-							<li>teaching</li>
-							<li>discography</li>
+					<li><div class="dropdown">
+						<a id="dropbtn">work</a>
+						<ul class="dropdown-content">
+							<li><a href="{{ navlinks.web }}">web</a></li>
+							<li><a href="{{ navlinks.instruments }}">instruments</a></li>
+							<li><a href="{{ navlinks.teaching }}" target="blank">teaching</a></li>
+							<li><a href="{{ navlinks.disco }}">discography</a></li>
 						</ul>
-					</li>
+						</div></li>
 					<li><a href="{{ navlinks.contact }}">contact</a></li>
 				</ul>
-				<div id="hamburger">&#9776;</div>
 			</div>
 		</header>
 		<div class="cts-main-content">

@@ -31,14 +31,6 @@ body {
 	color: #ffffff;
 
 	}
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #555;
-    margin: 1em 0;
-    padding: 0;
-}
 
 a {
 	text-decoration: none;
@@ -53,12 +45,18 @@ a:visited {
 }
 
 form {
-	font-size: 100%;
-	line-height: 200%;
+	display: flex;
+	flex-direction: column;
 }
-form input, textarea, button {
-	line-height: 200%;
+.contact-form input, textarea {
+	line-height: 100%;
 	font-size: 100%;
+}
+
+.contact-form button {
+	line-height: 150%;
+	font-size: 120%;
+	width: 25%;
 }
 
 /* 
@@ -72,42 +70,171 @@ form input, textarea, button {
 	justify-content: space-between;
 	flex-wrap: nowrap;
 	align-items: center;
-	overflow: hidden;
-	background: rgba(0,0,0,0.7);
+	background: #220055;
 	width: 100%;
 	top: 0;
 	height: 50px;
-	padding: 0px;
-	font-family: 'Karla', sans-serif;
 	text-transform: uppercase;
 	}
 
 .cts-navbar__main-list {
 	list-style-type: none;
 	background-color: transparent;
-	overflow: hidden;
-	font-size: 65%;
-	line-height: 100%;
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
 	align-items: center;
 	color: #ffffff;
-	text-decoration: none;
 	font-family: 'Raleway', sans-serif;
+	font-size: 65%;
 }
 
-.cts-navbar__main-list li {
-	display: inline-block;
-	border: solid 3px transparent;
-	border-radius: 3px;
-	margin-right: 15px;
-	transition: border 500ms;
-}
 
 .cts-navbar__main-list a {
 	display: inline-block;
+	margin-right: 15px;
+	border: solid 3px transparent;
+	border-radius: 3px;
+	transition: border 500ms;
 	padding: 10px;
+	color: #ffffff;
+}
+
+.cts-navbar__main-list a:hover {
+	border: solid 3px #ffffff;
+	transition: border 250ms;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropbtn {
+	color: #ffffff;
+	padding: 16px;
+	border: none;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	top: 42px;
+	padding-top: 4px;
+	background-color: #220055;
+	min-width: 160px;
+	font-size: 90%;
+	letter-spacing: 0.06em;
+}
+
+.dropdown-content li {
+	padding: 0px;
+	border: none;
+}
+
+.dropdown-content a {
+	padding: 15px;
+	min-width: 160px;
+	border: none;
+}
+
+.dropdown-content li:hover {
+	background-color: rgba(255,255,255,0.4);
+	border: none;
+}
+
+.dropdown-content a:hover {
+	border: none;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+
+#cts-home-button {
+	display: inline-block;
+	background-color: transparent;
+	width: 200px;
+	white-space: nowrap;
+	text-decoration: none;
+	color: #ffffff;
+	letter-spacing: 0.05em;
+	line-height: 100%;
+	font-family: 'Karla', sans-serif;
+	font-size: 100%;
+	font-weight: 600;
+	text-align: center;
+	border: solid 3px transparent;
+}
+
+
+.cts-main-content {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	margin-left: 25%;
+	padding-top: 100px;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 0.01em;
+	line-height: 100%;
+}
+
+.cts-page-title {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 200%;
+	line-height: 200%;
+	color: #ffffff;
+	padding-top: 0px;
+	padding-bottom: 50px;
+}
+
+.cts-main-content_section {
+	width: 100%;
+	font-size: 80%;
+	text-align: left;
+}
+/*
+ * Section 3: Schedule list layout
+ */
+
+#php-schedule {
+	width: 100%;
+	font-size: 100%;
+}
+
+#php-schedule li {
+	text-align: left;
+	background-color: #222;
+	margin-top: 3%;
+	line-height: 150%;
+	padding: 20px;
+	cursor: pointer;
+}
+
+#php-schedule li:hover {
+	background-color: rgba(0,0,0,0.35);
+}
+
+.php-gCal__details {
+	font-size: 75%
+}
+
+.php-gCal__title {
+	font-weight: 700;
+	font-size: 100%;
+}
+
+
+
+/*
+@media only screen and (max-width: 600px) {
+	#about-text {
+		background-color: rgba(200, 200, 200, 0.2);
+		padding: 20px;
+		margin: 20px;
+	}
 }
 
 #hamburger {
@@ -132,33 +259,27 @@ form input, textarea, button {
 	}
 }
 
-.cts-navbar__main-list li a {
-	color: #ffffff;
+@media only screen and (max-width: 600px) {
+	body {
+		background-size: 100%;
+	}
+	.cts-main-content {
+		width: 100%;
+		padding: 10px;
+		margin: 0;
+		margin-top: 120px;
+
+	}
 }
 
-.cts-navbar__main-list li:hover {
-	border: solid 3px #ffffff;
-	transition: border 250ms;
+@media only screen and (max-width: 600px) {
+	.cts-page-title {
+		display: none;
+	}
+
+
 }
 
-#cts-home-button {
-	display: inline-block;
-	background-color: transparent;
-	width: 200px;
-	white-space: nowrap;
-	text-decoration: none;
-	color: #ffffff;
-	letter-spacing: 0.05em;
-	line-height: 100%;
-	font-family: 'Karla', sans-serif;
-	font-size: 100%;
-	font-weight: 600;
-	text-align: center;
-	transition: font-size 500ms;
-	border: solid 3px transparent;
-}
-
-/*
 @media only screen and (max-width: 480px) {
 	.cts-navbar {
 		height: 70px;
@@ -172,96 +293,4 @@ form input, textarea, button {
 	}
 
 }
-i*/
-.cts-page-title {
-	text-align: center;
-	font-family: 'Raleway', sans-serif;
-	font-size: 200%;
-	color: #ffffff;
-	padding-top: 10px;
-	padding-bottom: 50px;
-	line-height: 200%;
-}
-/*
-@media only screen and (max-width: 600px) {
-	.cts-page-title {
-		display: none;
-	}
-
-
-}
 */
-.cts-main-content {
-	width: 50%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	text-align: center;
-	padding-top: 5%;
-	margin-left: 25%;
-	font-family: 'Raleway', sans-serif;
-	letter-spacing: 0.01em;
-	line-height: 100%;
-}
-
-.cts-main-content_section {
-	width: 100%;
-	font-size: 80%;
-	text-align: left;
-}
-/*
-@media only screen and (max-width: 600px) {
-	body {
-		background-size: 100%;
-	}
-	.cts-main-content {
-		width: 100%;
-		padding: 10px;
-		margin: 0;
-		margin-top: 120px;
-
-	}
-}
-*/
-/*
- * Section 3: Schedule list layout
- */
-
-#php-schedule {
-	width: 100%;
-	font-size: 100%;
-}
-
-#php-schedule li {
-	text-align: left;
-	background-color: rgba(0,0,0,0.6);
-	margin-top: 3%;
-	line-height: 150%;
-	padding: 20px;
-	cursor: pointer;
-}
-
-#php-schedule li:hover {
-	background-color: rgba(255,255,255,0.3);
-}
-
-.php-gCal__details {
-	font-size: 75%
-}
-
-.php-gCal__title {
-	font-weight: 700;
-	font-size: 100%;
-}
-#about-text {
-	background-color: transparent;
-	padding: 20px;
-	margin: 20px;
-}
-@media only screen and (max-width: 600px) {
-	#about-text {
-		background-color: rgba(200, 200, 200, 0.2);
-		padding: 20px;
-		margin: 20px;
-	}
-}
