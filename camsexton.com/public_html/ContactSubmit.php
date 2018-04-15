@@ -24,7 +24,7 @@ $headers = "From: $email_from \r\n";
 
 //send email!
 
-// mail($to, $email_subject, $email_body, $headers);
+mail($to, $email_subject, $email_body, $headers);
 
 $auto_resp_body = "Hi $name,\n\nThanks for getting in touch! Here's a copy of your message:\n\n\"$msg\"\n\nI'll get back to you ASAP!\n\nCam Sexton";
 

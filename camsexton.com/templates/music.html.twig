@@ -1,10 +1,20 @@
-{% extends "./base.html.twig" %}
+{% extends "./base_wide.html.twig" %}
 
-{% block cts_main_content %}
+{% block cts_main_content_wide %}
 	<div class="cts-page-title">
 		Music
 	</div>
 	<div class="cts-main-content_section">
-
+		<div style="display: flex; justify-content: center">
+			<iframe style="display: inline-block; padding: 15px" width="700" height="393" src="https://www.youtube.com/embed/1rez22_YmaM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<iframe style="display: inline-block; padding: 15px" width="700" height="393" src="https://www.youtube.com/embed/tG62_ttXpVk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<div style="display: flex; justify-content: center">
+			<iframe style="padding: 15px; border: 0; width: 700px; height: 1070px;" src="https://bandcamp.com/EmbeddedPlayer/album=3660601876/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="http://thesurfaceproject.bandcamp.com/album/next">Next by The SURFACE Project</a></iframe>
+			<div style="padding: 15px; width: 700px">
+			<iframe style="display: block; padding-bottom: 30px"  width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/261693961&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+			<iframe style="display: block" width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/227230575&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+			</div>
+		</div>
 	</div>
 {% endblock %}
