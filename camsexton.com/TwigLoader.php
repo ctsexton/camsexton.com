@@ -13,7 +13,10 @@
 		'about' => 'about.php',
 		'web' => 'web.php',
 		'instruments' => 'instruments.php',
-		'teaching' => 'https://www.musicteacher.com.au/cameron-sexton/drum-lessons/',
-		'disco' => 'disco.php'
+		'teaching' => 'teaching.php',
+		'disco' => 'disco.php',
+		'submit' => 'ContactSubmit.php',
+		'music' => 'music.php',
+		'github' => 'https://github.com/ctsexton'
 	);
 ?>

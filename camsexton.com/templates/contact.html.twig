@@ -4,13 +4,13 @@
 	<div class="cts-page-title">
 		Complaints
 	</div>
-	<form class="contact-form">
+	<form class="contact-form" method="post" action="{{ navlinks.submit }}">
 			Your Name:<br>
 			<input type="text" name="name"><br>
 			Email:<br>
 			<input type="text" name="email" size="40"><br>
 			Message:<br>
 			<textarea name="message" cols="50" rows="10"></textarea><br>
-			<button type="submit">Submit</button>
+			<button name="submit" type="submit">Submit</button>
 	</form>
 {% endblock %}
