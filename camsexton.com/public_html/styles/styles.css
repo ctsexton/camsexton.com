@@ -177,7 +177,7 @@ form {
 	padding-top: 100px;
 	font-family: 'Raleway', sans-serif;
 	letter-spacing: 0.01em;
-	line-height: 100%;
+	line-height: 150%;
 }
 
 .cts-page-title {
@@ -194,6 +194,10 @@ form {
 	width: 100%;
 	font-size: 80%;
 	text-align: left;
+}
+
+.cts-footer {
+	padding: 30px;
 }
 /*
  * Section 3: Schedule list layout
