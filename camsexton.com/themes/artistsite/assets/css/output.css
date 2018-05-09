@@ -1,0 +1,275 @@
+/*
+ *
+ * Cam Sexton's
+ * Artist/musician/band/venue website CSS
+ *
+ * Client: Cam Sexton
+ * Date: March 2018
+ * 
+ * Contents:
+ *
+ * 1. Global themes, background etc.
+ * 1. Navigation bars
+ * 2. Schedule (gig list layout)
+ *
+ */
+/*
+ * Section 1: Global themes
+ */
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #7799dd;
+  font-family: 'Karla', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: #ffffff; }
+
+a {
+  text-decoration: none; }
+
+a:link {
+  color: black; }
+
+a:visited {
+  color: black; }
+
+form {
+  display: flex;
+  flex-direction: column; }
+
+.contact-form input, textarea {
+  line-height: 100%;
+  font-size: 100%; }
+
+.contact-form button {
+  line-height: 150%;
+  font-size: 120%;
+  width: 25%; }
+
+/* 
+ * Section 2: Navigation
+ */
+.cts-navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  background: #220055;
+  width: 100%;
+  top: 0;
+  height: 50px;
+  text-transform: uppercase; }
+
+.cts-navbar__main-list {
+  list-style-type: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 65%; }
+
+.cts-navbar__main-list a {
+  display: inline-block;
+  margin-right: 15px;
+  border: solid 3px transparent;
+  border-radius: 3px;
+  transition: border 500ms;
+  padding: 10px;
+  color: #ffffff; }
+
+.cts-navbar__main-list a:hover {
+  border: solid 3px #ffffff;
+  transition: border 250ms; }
+
+.dropdown {
+  position: relative;
+  display: inline-block; }
+
+.dropbtn {
+  color: #ffffff;
+  padding: 16px;
+  border: none; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 42px;
+  padding-top: 4px;
+  background-color: #220055;
+  min-width: 160px;
+  font-size: 90%;
+  letter-spacing: 0.06em; }
+
+.dropdown-content li {
+  padding: 0px;
+  border: none;
+  min-width: 160px;
+  display: flex;
+  align-items: center; }
+
+.dropdown-content a {
+  padding: 15px;
+  width: 100%;
+  border: none; }
+
+.dropdown-content li:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none; }
+
+.dropdown-content a:hover {
+  border: none; }
+
+.dropdown:hover .dropdown-content {
+  display: block; }
+
+#cts-home-button {
+  display: inline-block;
+  background-color: transparent;
+  width: 200px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  line-height: 100%;
+  font-family: 'Karla', sans-serif;
+  font-size: 100%;
+  font-weight: 600;
+  text-align: center;
+  border: solid 3px transparent; }
+
+.cts-main-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 25%;
+  padding-top: 100px;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.01em;
+  line-height: 150%; }
+
+.cts-main-content__wide {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  padding-top: 100px;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.01em;
+  line-height: 150%; }
+
+.cts-page-title {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 200%;
+  line-height: 200%;
+  color: #ffffff;
+  padding-top: 0px;
+  padding-bottom: 25px; }
+
+.cts-main-content_section {
+  width: 100%;
+  font-size: 80%;
+  text-align: left; }
+
+.cts-footer {
+  padding: 30px; }
+
+/*
+ * Section 3: Schedule list layout
+ */
+#php-schedule {
+  width: 100%;
+  font-size: 100%; }
+
+#php-schedule li {
+  text-align: left;
+  background-color: #220055;
+  margin-top: 3%;
+  line-height: 150%;
+  padding: 20px;
+  cursor: pointer; }
+
+#php-schedule li:hover {
+  background-color: rgba(0, 0, 0, 0.35); }
+
+.php-gCal__details {
+  font-size: 75%; }
+
+.php-gCal__title {
+  font-weight: 700;
+  font-size: 100%; }
+
+/*
+@media only screen and (max-width: 600px) {
+	#about-text {
+		background-color: rgba(200, 200, 200, 0.2);
+		padding: 20px;
+		margin: 20px;
+	}
+}
+
+#hamburger {
+	display: none;
+}
+
+@media only screen and (max-width: 800px) {
+	.cts-navbar__main-list {
+		display: none;
+	}
+
+	body {
+		background-size: 100%;
+		
+	}
+
+	#hamburger {
+		display: inline-block;
+		text-align: center;
+		font-size: 100%;
+		line-height: 100%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		background-size: 100%;
+	}
+	.cts-main-content {
+		width: 100%;
+		padding: 10px;
+		margin: 0;
+		margin-top: 120px;
+
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.cts-page-title {
+		display: none;
+	}
+
+
+}
+
+@media only screen and (max-width: 480px) {
+	.cts-navbar {
+		height: 70px;
+	}
+	#cts-home-button {
+		font-size: 100%;
+	}
+	
+	#hamburger {
+		font-size: 130%;
+	}
+
+}
+*/
+
+/*# sourceMappingURL=output.css.map */

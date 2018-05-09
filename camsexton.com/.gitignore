@@ -1,6 +1,0 @@
-start_server
-composer.phar
-vendor/
-compilation_cache/
-public_html/assets/
-.env
