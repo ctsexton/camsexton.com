@@ -1,2 +1,3 @@
-# web-projects
-Examples of my web development projects.
+Website: camsexton.com
+Author: Cam Sexton
+Read my code in /themes/artistsite
