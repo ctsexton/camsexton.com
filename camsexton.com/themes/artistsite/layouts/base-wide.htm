@@ -1,0 +1,40 @@
+==
+<?php
+function onStart() {
+    $this['navlinks'] = array(
+    'home'=>'/',
+    'about'=>'/about',
+    'schedule'=>'/schedule',
+    'artistsites'=>'/artistsites',
+    'instruments'=>'/instruments',
+    'music'=>'/music',
+    'blog'=>'/writing',
+    'github'=>'https://github.com/ctsexton',
+    'contact'=>'/contact',
+    );
+}
+?>
+==
+<!DOCTYPE html>
+<html lang="en">
+    {% partial "head" %}
+    <body>
+        <header>
+            {% partial "top-menu" %}
+        </header>
+        <div id="cts-body__wide">
+            {% page %}
+        </div>
+        <footer>
+        <script src="{{ [
+                '@jquery',
+                '@framework',
+                '@framework.extras',
+                'assets/javascript/app.js'
+            ]|theme }}">
+        </script>
+        {% scripts %}
+        {% styles %}
+        </footer>
+    </body>
+</html>
