@@ -1,8 +1,14 @@
-laq/start_server
-laq/assets/
-laq/vendor/
-laq/composer.phar
-laq/.env
-cts-schedule/
-uptown/
+# Ignore everything especially env:
+/*
+/.env
+/themes/*
 
+# Include only the following
+!/themes
+!/themes/artistsite
+!/README.md
+!/config
+!/composer.json
+!/package.json
+!/Gruntfile.js
+!/.htaccess
