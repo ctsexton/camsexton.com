@@ -27,4 +27,14 @@ git reset origin/master --hard HEAD
 ```
 git checkout -t origin/master
 ```
-7. At this point you should be good to go code-wise. You will need to manually copy over all files in storage/app for images, media etc.
+7. Run composer update on the new composer.json and optionally (for dev environment) install node modules with npm:
+```
+composer update
+npm install
+```
+8. Convert to dotenv mode in order to use the API keys:
+```
+php artisan october:env
+```
+9. At this point you should be good to go code-wise. You will need to manually copy over all files in storage/app for images, media etc.
+10. You will also need to add the values for GCAL_API_KEY, GCAL_ID, & GCAL_TIMEZONE to your .env file.

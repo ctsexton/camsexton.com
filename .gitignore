@@ -11,6 +11,8 @@
 !/config/api.php
 !/README.md
 !/composer.json
+!/composer.lock
 !/package.json
+!/package-lock.json
 !/Gruntfile.js
 !/.htaccess
