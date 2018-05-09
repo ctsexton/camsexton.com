@@ -2,12 +2,14 @@
 /*
 /.env
 /themes/*
+/config/*
 
 # Include only the following
 !/themes
 !/themes/artistsite
-!/README.md
 !/config
+!/config/api.php
+!/README.md
 !/composer.json
 !/package.json
 !/Gruntfile.js
