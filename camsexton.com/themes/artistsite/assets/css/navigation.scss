@@ -1,0 +1,257 @@
+/* 
+ * Navigation
+ */
+
+
+.cts-navbar {
+	position: fixed;
+	z-index: 10;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	align-items: center;
+	background: $navBackground;
+	color: $menuColor;
+	width: 100%;
+	top: 0;
+	height: 50px;
+	text-transform: uppercase;
+	
+	> .home-button {
+		display: inline-block;
+		background-color: transparent;
+		width: 200px;
+		white-space: nowrap;
+		text-decoration: none;
+		letter-spacing: 0.05em;
+		line-height: 100%;
+		font-family: $fontB;
+		font-size: 100%;
+		font-weight: 600;
+		color: $menuColor;
+		text-align: left;
+		border: solid 3px transparent;
+		padding-left: 15px;
+		@media #{$media-mobile} {
+			font-size: 80%;
+			padding-left: 5px;
+		}
+	}
+	> ul {
+		list-style-type: none;
+		display: flex;
+		align-items: center;
+		font-family: $fontA; 
+		font-size: 65%;
+		background-color: transparent;
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+		@media #{$media-mobile} {
+			flex-direction: column;
+			position: absolute;
+			top: 50px;
+			left: 0;
+			background: $navBackground--transparent;
+			width: 100%;
+			line-height: 200%;
+			text-align: center;
+
+		}
+
+		> li > a {
+			display: inline-block;
+			padding: 10px;
+			color: $menuColor;
+			position: relative;
+			z-index: 2;
+			
+			@media #{$media-desktop} {
+				margin-right: 15px;
+				border: solid 3px transparent;
+				border-radius: 0px;
+				transition: border 500ms;
+				&:hover {
+					border: solid 3px #ffffff;
+					transition: border 250ms;
+				}
+			}
+		}
+	}
+}
+
+#cts-menuButton {
+	display: none;
+	margin-right: 15px;
+	letter-spacing: 0.05em;
+	text-align: right;
+	font-family: $fontB;
+	font-size: 80%;
+	cursor: pointer;
+	@media #{$media-mobile} {
+		display: inline-block;
+		margin-right: 5px;
+	}
+}
+
+// four stage menu, is there an easier way???
+@media #{$media-mobile} {
+	.cts-navbar__main-list--up {
+		visibility: hidden;
+		padding: 0;
+		transition: all 500ms;
+		> li {
+			height: 0;
+			opacity: 0;
+			transition: all 500ms;
+			> ul {
+				opacity: 0;
+				padding: 0;
+				> li {
+					height: 0px;
+				}
+			}
+		}
+	}
+
+	.cts-navbar__main-list--down {
+		visibility: visible;
+		padding: 10px;
+		transition: all 500ms;
+		> li {
+			height: 50px;
+			opacity: 1;
+			transition: all 500ms;
+			> ul {
+				visibility: hidden;
+				opacity: 0;
+				padding: 0;
+				> li {
+					height: 0px;
+					transition: all 500ms;
+				}
+			}
+		}
+	}
+	.cts-navbar__main-list--openFully {
+		visibility: visible;
+		padding: 10px;
+		> li {
+			min-height: 50px;
+			opacity: 1;
+			> ul {
+				visibility: visible;
+				padding: 10px;
+				border-top: 1px solid #555555;
+				border-bottom: 1px solid #555555;
+				transition: all 1000ms;
+				> li {
+					height: 30px;
+					opacity: 1;
+					transition: all 500ms;
+				}
+			}
+		}
+	}
+	.cts-navbar__main-list--closeSubMenu {
+		visibility: visible;
+		padding: 10px;
+		> li {
+			height: 50px;
+			opacity: 1;
+			> ul {
+				visibility: hidden;
+				padding: 10px;
+				border-top: 1px transparent #555555;
+				border-bottom: 1px transparent #555555;
+				> li {
+					height: 0;
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+// Dropdown lists within the navbar
+.dropdown {
+	position: relative;
+	display: inline-block;
+
+	@media #{$media-desktop} {
+		// Make list appear on hover
+		&:hover .dropdown-content {
+			padding-top: 10px;
+			> li {
+				height: 50px;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		// Style dropdown list
+		&-content {
+			display: block; // Must display to preserve animation
+			//flex-direction: column;
+			position: absolute;
+			z-index: 0; // Place behind main-list link
+			left: 0px;
+			top: 36px;
+			padding-top: 0;
+			transition: padding-top 500ms;
+			background: $navBackground;
+			min-width: 160px;
+			font-size: 90%;
+			letter-spacing: 0.06em;
+
+			> li {
+				padding: 0px;
+				overflow: hidden;
+				visibility: hidden;
+				opacity: 0;
+				height: 0px;
+				transition: height 500ms, visibility 500ms, opacity 500ms;
+				border: none;
+				min-width: 160px;
+				display: flex;
+				align-items: center;
+
+				&:hover {
+					background-color: rgba(255,255,255,0.4);
+					border: none;
+				}
+				> a {
+					padding-left: 15px;
+					color: $menuColor;
+					width: 100%;
+					border: none;
+					&:hover {
+						border: none;
+					}
+				}
+			}
+		}
+	}
+	@media #{$media-mobile} {
+		&-content {
+			display: block;
+			padding: 20px;
+			//flex-direction: column;
+			> li {
+				min-width: 160px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				> a {
+					width: 100%;
+					text-align: left;
+					margin-left: 15px;
+					color: $menuColor;
+					font-size: 85%;
+					line-height: 200%;
+				}
+			}
+		}
+	}
+}

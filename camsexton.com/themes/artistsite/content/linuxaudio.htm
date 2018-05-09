@@ -1,0 +1,175 @@
+<div id="cts-pageTitle">
+    Pro Audio on Linux - Tips
+</div>
+
+<div id="cts-mainContent">
+    
+	<p>
+	I've recently moved to a Linux based environment for my music production work and I wanted to write something about my experiences on this path. 
+	</p>
+	<br>
+	<h2 style="text-align: center">
+	Pro Audio Software 
+	</h2><br>
+	<table style="margin: 0 auto">
+		<tr>
+			<th>Linux Software:</th>
+			<th>Mac/Windows Equivalent:</th>
+		<tr>
+			<td>JACK</td>
+			<td>CoreAudio, ASIO, WASAPI</td>
+		</tr>
+		<tr>
+			<td>Ardour</td>
+			<td>Pro Tools, Cubase, etc.</td>
+		</tr>
+		<tr>
+			<td>Bitwig Studio</td>
+			<td>Ableton Live</td>
+		</tr>
+		<tr>
+			<td>Lilypond (Frescobaldi)</td>
+			<td>Sibelius, Finale, Lilypond</td>
+		</tr>
+		<tr>
+			<td>Pure Data</td>
+			<td>Max, Pure Data</td>
+		</tr>
+		<tr>
+			<td>SuperCollider, ChucK, CSound</td>
+			<td>SuperCollider, ChucK, CSound</td>
+		</tr>
+	</table><br>
+	
+	<h2>
+	Should You Do It?
+	</h2><br>
+	<p>
+	For most musicians, to be honest I cannot recommend following this path right now. The time needed to essentially relearn how to use a computer will be a big obstacle for most.
+	However, for anyone willing to put in the effort the pay off is well worth it in my opinion. To properly configure the system you will need to learn to be comfortable using the command line and be prepared to do a lot of Google searches/scouring of forums. It is possible to try a distribution like KXStudio that will come preconfigured for realtime audio, but you'll probably be quickly turned off by a) how ugly it is, and b) the fact that it is still quite awkward to use.<br>
+	My reasons for leaving Mac/Windows behind were:
+	<ul style="margin-left: 5%;">
+		<li> - Persistent popups (during gigs, recording sessions), bloated software updates that cause everything to slow down</li>
+		<li> - Vendor lock-in, the "eco-system" where everything keeps getting more expensive</li>
+		<li> - A trend towards simplified, restricted software</li>
+	</ul><br>
+	By contrast, my top reasons for using a Linux-based system for production are:
+	<ul style="margin-left: 5%;">
+		<li> - Extremely customisable & efficient workflow - designed for writing code and using command line tools, alternative window managers (i.e. no desktop)</li>
+		<li> - Open Source - low-cost, focused (do one thing well!) software with frequent updates that improve the system rather than slow it down!</li>
+		<li> - Fast and simple operating system (Why is my mac so slow!?!?)</li>
+	</ul>
+	<br>
+	Most people do not want the above. The first time I installed Arch Linux, it took me about a month to get audio software working without X-Runs and then another 3-4 months before I was comfortable. But the thing is - Linux distributions are designed primarily for coders who want to build things. This has a surprising cross-over with the needs of artists and musicians. There is a lot to be said for creating tools that minimise the technical knowledge required for someone to complete a task. Commercial audio software on Windows/Mac does this well - Pro Tools is amazing, Ableton Live is amazing. But Linux is about the whole platform. Jack allows you to easily pipe music from any audio application to any other. Command line tools are easily available to automate complex processes and just about any problem is solvable. Write a bash script to automate the setup for your live performance.
+	</p>
+	<br>
+	<h2>
+		Drawbacks of Linux
+	</h2>
+	<br>
+	<p>
+	Audio Plugins. Most of them are terrible compared to commercially available Windows/Mac plugins. On the other hand, this forces you to be better at your job and get great results from minimal tools. You soon realise that an EQ is an EQ, a compressor is a compressor. There are a small number of great plugins. I use ZynAddSubFX religiously, despite the awkward interface it sounds phenomenal. Calf studio plugins tend to do the job. U-He plugins are excellent. The only area I am still searching for the perfect replacement is REVERBS. I used ValhallDSP plugins for years and loved their simple design, ease of use and great sound. No reverb I've tried on Linux satisfies any of those three criteria unfortunately. Learning curve. We covered this - give it a few months to fall in love and do a computer science course (CS50x from Harvard is free & great). Collaborating with others may be challenging... encourage them to make the switch!
+	<p>
+		Overall it's the perfect system for someone who likes coding and music, and who wants to save money.
+	</p>
+		<br>
+
+	<h2>
+		Lilypond vs Sibelius/Finale
+	</h2>
+	<br>
+	<p>
+	This is a tough one. I've been using Lilypond for a few months now to write simple charts and preparing worksheets for my drum students. I've done one arrangement for a group (violin, cello, tenor sax, keyboard, bass and drums). There is a lot that I miss from Sibelius and really, using Lilypond requires a massive shift in how you approach chart-writing. The features I really miss from Sibelius are automatic transposition of parts and not having to constantly manually insert empty bars to make sure all the parts are the same length. That last point is a biggie. Having alternative layouts between the full score and parts requires me to create sections of "spacer rests" for line breaks, though I think it should be possible to write a function that inserts a break in either the part or score based on a flag set by a global variable. But that seems kinda excessive. This is where enforcing a strict <i>process</i> is key. It took me a long time to realise that composition <b>should not</b> overlap with scoring. Ideally, you should compose with just your instrument and pen + paper. So many people are composing <i>in</i> Sibelius now and it's really not good practise. I did it too. But really the composition should be more or less done by the time you start your chart. Composing in scoring software is bad for a whole lot of reasons, mainly that it pushes you down narrow pathways in line with how the program works. You should use the scoring software to clearly communicate how the composition, that you have already conceived of, should be performed. You shouldn't need MIDI playback either. With that in mind, Lilypond is excellent.
+	</p><br>
+	<p>
+		I'm not convinced yet that I am as fast in Lilypond as Sibelius, but I don't think I'm that far behind really. There are however other benefits that I would miss if I returned to Sibelius. All my scores are text files and I can use git on them. That's pretty amazing for doing multiple versions of a score. Lilypond is open source and tiny. Using variables in Lilypond is very useful. However, the thing about music composition is that I don't actually want to use the same material identically over and over. Generally each time I use a snippet of music I need to make slight variations - otherwise I just use a repeat sign. So inevitably I still do a lot of copy and pasting of sections of code in Lilypond. Overall I am quite happy using Lilypond - some things are better and some things are slightly more difficult than they need to be. I think an experienced user of either Lilypond or Sibelius will likely be equally fast at creating scores, but they will spend more/less time on different tasks. I'm going to continue to use it since I can't get Sibelius anyway! 
+	</p>
+	<br>
+	<h2>
+		iTunes vs Cmus
+	</h2>
+	<br>
+	<p>
+	OK I am going to preface this by saying I really hate iTunes. Cmus is the clear winner here. iTunes on Mac became so painfully slow over the years and it's pretty obvious that Apple doesn't actually want you to own any of your music anymore. Cmus is super fast, simple and shortcut driven. There really is no comparison.
+	</p>
+	<br>
+	<br>
+I wanted to write something here about my recent move away from using proprietary software and tools to create music and art.
+
+The catalyst for this change was my acknowledgement that I needed to finally upgrade some 'old' hardware (namely a 2009 Macbook Pro) in order to take advantage 
+of significant increases in CPU power, disk speeds and graphics processing that have occurred over the last decade. Today it is possible to heavily process 
+multiple channels of audio and video on a single machine in real time with barely perceptible latency, Like many "professional" musicians I make very little 
+money from performing and selling the work I care about the most, and so when I discovered the price of a new Macbook Pro in 2017 I realised that it was just not 
+within my means to upgrade. Furthermore, Apple is notorious for using smaller, less powerful components for the sake of thinness and aesthetic design over 
+raw power. So of course the obvious alternative was a Windows machine, as it is possible to buy a Windows laptop that is far more powerful than the most expensive 
+Macbook Pro - for less money than the cheapest Macbook Pro. Yet, while Windows laptops might annihilate Macs in performance, let's be honest the operating system 
+is a horrible mess. WARNING OPINIONATED RANT: Coming from the Unix-based MacOS (X), where the structure of everything is quite simple, Windows is the most confusing 
+nightmare - especially from a programmer's point of view. The command line doesn't work properly, the file tree structure is bizarre. And then on top of that, 
+getting low-latency audio and associated software has always been unreliable and challenging. I believe to a degree that the latter point is less true today, 
+as Microsoft have apparently updated their WASAPI drivers to support lower latencies. Still, it's no CoreAudio and everyone still seems to be using ASIO drivers 
+provided by interface manufacturers. When it comes to interface support, Firewire is now dead but USB3 varies in reliability for various laptops made over the last 
+few years. So Windows is OK and improving it would seem for audio work. 
+
+However, both Apple and Windows are heading in directions that are completely unfriendly to small, independent artists. Here are some other issues common to both OSes:
+
+ - Updates. In their own words, Windows 10 is now a "service" and updates are not optional. You will not be able to even restart your laptop until updates complete.
+Apple is just as bad here and will pester you with popups insisting you update either now, in an hour or tomorrow. This is the biggest reason I dropped both.
+If I'm working I don't want or need distractions. Popups in the middle of a live performance could crash a system under CPU load. Popups during a recording can ruin takes.
+If I can't quickly reboot to reset the system after a crash I'm fucked. Forced updates are the single biggest reason I ditched Mac and Windows.
+
+ - Vendor lock-in or the "eco-system". They will suck as much money out of you as they can as often as they can. 
+
+ - Really long load times. On my new-ish Windows laptop with an SSD it takes a bizarrely long time to startup and login to Windows, let alone starting up various applications. 
+Shutting down often takes just as long. Why? I haven't tried new Macs but I'm sure they are reasonably quick but you know what? Running Arch Linux on a cheap Asus laptop from 
+2008 I can go from pressing the on button to commencing heavy audio processing in a pure data patch in under 20 seconds - and I don't have to do anything except press the ON button 
+if I so choose.
+
+ - Subscription-based software licenses. Yes it's really expensive to constantly pay for all this stuff. Not that the companies don't deserve it for their hard work. 
+Nobody is paying me for all my hard work either and I think the software engineers are probably doing OK. I don't want to steal software of course. Miller Puckette makes an 
+excellent point here that the business model of proprietary software companies is to keep adding new features until a piece of software is overly bloated and dies. They need 
+to add new features to keep customers coming back for more. Ableton Live 10 has just been released with an astounding number of new features and effects and synthesizers. 
+Don't get me wrong I looked at that feature list with the same desire as anyone else involved with electronic music production. Congratulations Ableton on making a great 
+product. Workflow enhancements are always welcome and I'm sure I'd find much of it useful. But consider this - the vast majority of Live users (and 
+Mac/Windows users) have no idea what excellent and useful tools/features are available on a free Linux distro and not on Mac/Windows.
+
+So yes obviously I'm advocating strongly for using Linux as an artist or musician. 
+
+The most important question: is Linux a stable and capable platform for producing music and video?
+
+The answer today, in 2018, is an absolute YES. The next question is: is the software available going to match the capabilities of Mac/Windows music software?
+Let's consider CoreAudio, Pro Tools, Ableton and Sibelius. All very popular and powerful tools for music creation.
+
+On Linux the equivalent programs are, respectively, JACK, Ardour, Bitwig Studio and probably Lilypond. The workflow of a few of these (JACK and Lilypond) is extremely 
+different to what a Mac/Windows user will be used to. There is a learning curve. After that however, I am certain that the capabilities of all of these tools are 
+no less than what is possible on Mac and Windows (and the Linux workflow is arguably faster and more flexible).
+
+In recording software however, one remaining area that Linux suffers is in audio plugins. Major plugin vendors generally do not release plugins for Linux and while 
+there are many free options, I admit it has been a challenge for me to find a set of plugins that is reliable (no random crashes!) and has a quality user interface. 
+Sound-wise most plugins do seem to do the job so I'm not super picky, but stable and useful plugins are relatively rare.
+
+Guide to setting up Arch Linux/Manjaro with JACK:
+
+Audio interface. The MOTU Ultralite AVB is class compliant and is the best I've found so far. The RME UCX is also class compliant and I would have gone for that except that 
+MOTU has a web interface that allows users to mix and do all the fancy stuff you'd find in TotalMix but in any browser on any OS. Very useful!
+
+The other big benefit of linux is... BASH! (Also available on Mac to be fair). Learning to use the terminal has made a profound improvement in my ability to use computers and increase my productivity. The fact that I can write a script that will set up all my audio routing connections and start various programs in the right order means that setting up at a gig is 
+incredibly easy and reliable. There is no messing around with buffer sizes or any bullshit that I see the average Mac/Windows user doing when they are soundchecking their rig. 
+I write the script and test it before I leave home, then when I arrive at the gig I am absolutely confident that all I need to do is plug everything in and run the script to be set up 
+and ready before the Mac user has even clicked on the Ableton icon.
+
+Using the package manager in Arch Linux also means I can update as often as I like to maintain a current system, but it will NEVER ask me to do so. 
+
+Other benefits of Linux are that if, like me, you are interested in learning to code or develop your own performance systems, then the OS is designed to allow you to make whatever you 
+want. Free tools are available such as Pure Data, SuperCollider, ChucK, CSound and all the usual "real" programming languages. JUCE is available for building plugins too. You can route 
+audio between apps easily and with zero latency using JACK. 
+
+A lot of people on the Cycling 74 forums complain that Max is not available on Linux and that Pure Data is not a satisfactory substitute. Initially I felt this way too, but today 
+I actually disagree with this suggestion. In many ways Pure Data works in a much more straightforward way than Max. For example - Miller Puckette's implementation of arrays in Pd covers 
+all of the categories of buffers and tables etc. in Max. Max has a lot of high-level abstractions and packages integrating the environment with other technologies yes. But on the 
+other hand I have found Pd to be far more stable (Max would randomly crash occassionally) and predictable (Overdrive mode in Max breaks determinism of patches). It is definitely 
+lacking in the UI and attempts such as Purr-Data have been made to address that. What I would really appreciate is something like the Purr-Data interface but using the Vanilla 
+distribution, so that users can add external libraries themselves. In any case, personally since I have discovered SuperCollider I have been find that working in that environment 
+is vastly more powerful and efficient than working in both Max and Pd, so I'm pretty happy exploring that at the moment. Some people have said Pd doesn't have anything like Max's 
+Gen feature, for generating C code in a patching environment. To be honest though, I think you're better off just learning C and making an external. 
+
+</div>

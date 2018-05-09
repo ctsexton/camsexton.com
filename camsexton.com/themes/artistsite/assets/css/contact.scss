@@ -1,0 +1,126 @@
+/*
+ * CONTACT FORM
+ */
+
+.contact-form {
+	display: inline-block;
+	padding: 30px;
+	width: 50%;
+	background: white;
+	box-shadow: 3px 3px 10px grey;
+	margin-top: 30px;
+	letter-spacing: 0.05em;
+	font-weight: 200;
+	font-size: 100%;
+	input[type="text"], textarea {
+		line-height: 150%;
+		font-size: 100%;
+		width: 100%;
+		max-width: 100%;
+		margin: 10px 0 10px 0;
+		border: #999 1px solid;
+		border-radius: 3px;
+	}
+	button {
+		font-size: 120%;
+		cursor: pointer;
+		background-color: $navBackground;
+		color: $menuColor;
+		border: 2px solid transparent;
+		font-weight: bold;
+		padding: 10px;
+		margin-top: 10px;
+		 &:hover {
+			 background-color: white;
+			 color: black;
+			 border: 2px black solid;
+		 }
+	}
+	@media #{$media-mobile} {
+		width: 95%;
+		font-size: 90%;
+		padding: 15px;
+
+	}
+}
+#contact-inputs {
+	display: inline-block;
+	width: 45%;
+	vertical-align: top;
+	@media #{$media-mobile} {
+		width: 100%;
+	}
+}
+#contact-info {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	float: right;
+	padding: 15px;
+	background: rgba(230,180,10,0.1);
+	line-height: 100%;
+	ul {
+		margin: 10px;
+		li {
+			line-height: 150%;
+		}
+	}
+	@media #{$media-mobile} {
+		width: 100%;
+		line-height: 120%;
+		ul { 
+			margin: 5px;
+			li {
+				line-height: 120%;
+			}
+		}
+	}
+}
+
+.contact-info__invisible {
+	visibility: hidden;
+}
+.contact-info__visible {
+	visibility: visible;
+}
+
+#cts-radioButtons {
+	margin: 20px;
+	input[type="radio"] {
+		display: none;
+	}
+
+	input[type="radio"] + label:before {
+		background-color: white;
+		border: 3px solid #ccc;
+		border-radius: 50%;
+		content: "";
+		display: inline-block;
+		font-size: 100%;
+		height: 16px;
+		width: 16px;
+		line-height: 100%;
+		margin: 5px 10px 10px 0;
+		vertical-align: middle;
+		cursor: pointer;
+		@media #{$media-mobile} {
+			height: 8px;
+			width: 8px;
+			margin: 3px 5px 5px 0;
+		}
+	}
+	input[type="radio"]:checked + label:before {
+		content: "";
+		text-align: center;
+		font-weight: bold;
+		background-color: #333;
+	}
+	> label {
+		cursor: pointer;
+		@media #{$media-mobile} {
+			font-size: 125%;
+			line-height: 150%;
+		}
+
+	}
+}
