@@ -1,0 +1,6 @@
+plugin:
+    name: 'camsexton.contact::lang.plugin.name'
+    description: 'camsexton.contact::lang.plugin.description'
+    author: 'Cam Sexton'
+    icon: oc-icon-adjust
+    homepage: ''

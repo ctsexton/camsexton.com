@@ -3,12 +3,15 @@
 /.env
 /themes/*
 /config/*
+/plugins/*
 
 # Include only the following
 !/themes
 !/themes/artistsite
 !/config
 !/config/api.php
+!/plugins
+!/plugins/camsexton
 !/README.md
 !/composer.json
 !/composer.lock

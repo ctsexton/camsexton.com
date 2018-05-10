@@ -1,0 +1,34 @@
+<form method="POST" class="contact-form" data-request="onSend" data-request-validate>
+	<div id="successmsg">
+		<div id="contact-inputs">
+			Your Name:<br>
+			<input type="text" name="name" autofocus>
+			<div data-validate-for="name"></div>
+			<br>
+			Your Email:<br>
+			<input type="text" name="email">
+			<div data-validate-for="email"></div>
+			<br>
+			What can I do for you?
+			<div id="cts-radioButtons">
+
+				<input type="radio" class="check" name="work" id="web" />
+				<label for="web">Web Design</label> <br>
+
+				<input type="radio" class="check" name="work" id="audio" />
+				<label for="audio">Recording/Mixing</label><br>
+
+				<input type="radio" class="check" name="work" id="gig" />
+				<label for="gig">Live Performance</label><br>
+
+				<input type="radio" class="check" name="work" id="other" />
+				<label for="other">Other</label><br>
+			</div>
+		</div>
+		<div id="contact-info" class="contact-info__invisible">
+		</div>
+		Message:<br>
+		<textarea name="content" cols="50" rows="7">Hi Cam,</textarea><br>
+		<button data-attach-loading>Submit</button>
+	</div>
+</form>

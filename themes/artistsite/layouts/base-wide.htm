@@ -11,6 +11,7 @@ function onStart() {
     'blog'=>'/writing',
     'github'=>'https://github.com/ctsexton',
     'contact'=>'/contact',
+	'submit'=>'/submit',
     );
 }
 ?>
@@ -28,11 +29,10 @@ function onStart() {
         <footer>
         <script src="{{ [
                 '@jquery',
-                '@framework',
-                '@framework.extras',
                 'assets/javascript/app.js'
             ]|theme }}">
         </script>
+		{% framework extras %}
         {% scripts %}
         {% styles %}
         </footer>
