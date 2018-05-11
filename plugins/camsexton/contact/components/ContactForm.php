@@ -52,7 +52,7 @@ class ContactForm extends ComponentBase
 			});
 
 			// Display success message
-			return ['#successmsg' => $this->renderPartial('@formSuccess.htm', [
+			return ['#formContent' => $this->renderPartial('@formSuccess.htm', [
 				'name' => Input::get('name')
 			])];
 		}

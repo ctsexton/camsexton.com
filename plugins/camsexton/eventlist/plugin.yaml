@@ -1,0 +1,6 @@
+plugin:
+    name: 'camsexton.eventlist::lang.plugin.name'
+    description: 'camsexton.eventlist::lang.plugin.description'
+    author: 'Cam Sexton'
+    icon: oc-icon-calendar
+    homepage: ''
