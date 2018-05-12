@@ -1,0 +1,11 @@
+name: Events
+modelClass: CamSexton\EventList\Models\Event
+form: $/camsexton/eventlist/models/event/fields.yaml
+defaultRedirect: camsexton/eventlist/events
+create:
+    redirect: 'camsexton/eventlist/events/update/:id'
+    redirectClose: camsexton/eventlist/events
+update:
+    redirect: camsexton/eventlist/events
+    redirectClose: camsexton/eventlist/events
+preview: {  }

@@ -6,7 +6,7 @@
 		<div class='details force-word-wrap'>
 			{{ item.date_time }} <br>
 			{{ item.venue }} <br>
-			{{ item.desc }} 
+			{{ item.desc | raw }} 
 		</div>
 	</div>
 {% endfor %}

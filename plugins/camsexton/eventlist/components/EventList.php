@@ -64,7 +64,7 @@ class EventList extends ComponentBase
 
 		// GET request URL and convert JSON string to PHP object
 
-		$json = $this->requestCal($requestAllURL);
+		$json = $this->requestCal($requestURL);
 		if ($json === 1) {
 			return "";
 		}

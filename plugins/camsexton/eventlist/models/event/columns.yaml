@@ -1,0 +1,19 @@
+columns:
+    title:
+        label: 'camsexton.eventlist::lang.event.title'
+        type: text
+        searchable: true
+        sortable: true
+    datetime:
+        label: datetime
+        type: datetime
+        searchable: true
+        sortable: true
+    venue:
+        label: venue
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: description
+        type: text

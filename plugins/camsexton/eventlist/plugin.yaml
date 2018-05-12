@@ -4,3 +4,8 @@ plugin:
     author: 'Cam Sexton'
     icon: oc-icon-calendar
     homepage: ''
+navigation:
+    main-menu-item:
+        label: Events
+        url: /camsexton/eventlist/events
+        icon: icon-life-ring

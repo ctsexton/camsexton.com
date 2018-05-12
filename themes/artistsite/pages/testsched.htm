@@ -1,0 +1,34 @@
+title = "testsched"
+url = "/testsched"
+layout = "base-wide"
+is_hidden = 0
+
+[displayevents]
+==
+{% component 'displayevents' %}
+
+{{ dump(displayevents) }}
+<h1>Upcoming Events</h1>
+<ul>
+{% for event in displayevents.upcomingEvents %}
+<li style="padding: 15px; margin: 10px; background: rgba(0,0,0,0.5); color: white">
+    <div>{{ event.title }}</div>
+    <div>{{ event.datetime }}</div>
+    <div>{{ event.venue }}</div>
+    <div>{{ event.description | raw}}</div>
+
+</li>
+{% endfor %}
+</ul>
+<h1>Past Events</h1>
+<ul>
+{% for event in displayevents.pastEvents %}
+<li style="padding: 15px; margin: 10px; background: rgba(0,0,0,0.5); color: white">
+    <div>{{ event.title }}</div>
+    <div>{{ event.datetime }}</div>
+    <div>{{ event.venue }}</div>
+    <div>{{ event.description | raw}}</div>
+
+</li>
+{% endfor %}
+</ul>

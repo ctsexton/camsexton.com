@@ -8,6 +8,7 @@ class Plugin extends PluginBase
     {
 		return [
 			'CamSexton\EventList\Components\EventList' => 'eventlist',
+			'CamSexton\EventList\Components\DisplayEvents' => 'displayevents',
 		];
     }
 
