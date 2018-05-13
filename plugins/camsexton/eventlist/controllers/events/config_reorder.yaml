@@ -1,4 +1,0 @@
-title: Events
-modelClass: CamSexton\EventList\Models\Event
-toolbar:
-    buttons: reorder_toolbar
