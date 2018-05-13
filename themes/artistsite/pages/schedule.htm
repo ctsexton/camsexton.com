@@ -3,13 +3,23 @@ url = "/schedule"
 layout = "base-wide"
 is_hidden = 0
 
-[eventlist]
+[CamSexton\Events\Components\UpcomingEvents upcomingevents]
+
+[CamSexton\Events\Components\PastEvents pastevents]
 ==
 <div class="banner">
 	Upcoming Events
 </div>
 <div class="content-centered">
 	<div class="container container-vertical">
-		{% component 'eventlist' %}
+		{% component 'upcomingevents' %}
+	</div>
+</div>
+<div class="banner">
+	Past Events
+</div>
+<div class="content-centered">
+	<div class="container container-vertical">
+		{% component 'pastevents' %}
 	</div>
 </div>
