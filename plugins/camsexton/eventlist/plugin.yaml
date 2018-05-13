@@ -6,6 +6,6 @@ plugin:
     homepage: ''
 navigation:
     main-menu-item:
-        label: Events
+        label: Event_List
         url: /camsexton/eventlist/events
         icon: icon-life-ring
