@@ -20,8 +20,6 @@ class UpcomingEvents extends ComponentBase
 	}
 
 	public $events;
-	public $rawdate;
-	public $tzdate;
 
 	protected function queryEvents() {
 		$this->events = Db::select("SELECT 
