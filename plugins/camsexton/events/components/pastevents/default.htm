@@ -2,7 +2,7 @@
 {% for event in __SELF__.events %}
 <li>
     <div>{{ event.title }}</div>
-	<div>{{ event.day }} {{ event.date }} {{ event.month }} at {{ event.hour}}:{{ event.minute }}{{ event.ampm }}</div>
+	<div>{{ event.format_date }}</div>
     <div>{{ event.venue }}</div>
     <div>{{ event.description | raw}}</div>
 </li>

@@ -1,9 +1,11 @@
 columns:
-    event_id:
-        label: 'Event ID'
-        type: text
     title:
         label: Title
+        type: text
+        searchable: true
+        sortable: true
+    venue:
+        label: Venue
         type: text
         searchable: true
         sortable: true
@@ -12,17 +14,12 @@ columns:
         type: datetime
         searchable: true
         sortable: true
-    venue:
-        label: Venue
+    description:
+        label: Description
         type: text
         searchable: true
-        sortable: true
     event_timezone:
         label: Timezone
         type: text
         searchable: true
         sortable: true
-    description:
-        label: Description
-        type: text
-        searchable: true
