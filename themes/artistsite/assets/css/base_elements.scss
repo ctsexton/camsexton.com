@@ -20,6 +20,103 @@ a {
 		color: $linkColor;
 	}
 }
+
+// Page banner
+.banner {
+	display: block;
+	width: 100%;
+	background: $banner-background;
+	color: $banner-text-color;
+	font-size: 200%;
+	font-weight: 200;
+	padding: 20px;
+	text-align: right;
+	@media #{$media-mobile} {
+		font-size: 100%;
+		padding: 10px;
+	}
+	&-fixed {
+		position: fixed;
+		top: 50px;
+	}
+}
+
+.content-centered {
+	width: 100%;
+	padding: 0 25% 0 25%;
+	@media #{$media-mobile} {
+		margin: 0;
+		padding: 0;
+	}
+}
+.container-horizontal {
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+.container-vertical {
+	flex-direction: column;	
+	justify-content: center;
+	align-items: space-around;
+}
+.container-fullWidth {
+	width: 100%;
+}
+.container-halfWidth {
+	width: 50%;
+	@media #{$media-mobile} {
+		width: 100%;
+	}
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+
+	> .item {
+		background: white;
+		box-shadow: 5px 5px 20px #aaa;
+		margin: 30px;
+		padding: 30px;
+		flex-basis: 45%;
+		> .item-title {
+			font-weight: 200;
+		}
+		.subtitle {
+			font-size: 75%;
+			margin: 10px 0 10px 0;
+		}
+		> .details {
+			font-size: 75%;
+			font-weight: 200;
+			margin: 10px 0 10px 0;
+			line-height: 125%;
+			> a {
+				color: black;
+				font-weight: 400;
+			}
+			> ul {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				li {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+	> .item-wide {
+		flex-basis: 75%;
+	}
+	@media #{$media-mobile} {
+		> .item {
+			flex-basis: auto;
+			font-size: 75%;
+			padding: 15px;
+			margin: 15px;
+		}
+	}
+}
+
 .force-word-wrap {
 	word-wrap: break-word;
 	word-break: break-word;
@@ -80,37 +177,6 @@ a {
 
 #cts-footer {
 	padding: 0;
-}
-
-.top-layer {
-	background-image: $backgroundTexture; 
-	background-repeat: repeat;
-	margin-top: 400px;
-	z-index: 1;
-	@media #{$media-mobile} {
-		margin-top: 300px;
-	}
-}
-
-.img-span {
-	background: black;
-	position: fixed;
-	width: 100%;
-	height: 400px;
-	z-index: -1;
-	@media #{$media-mobile} {
-		height: 300px;
-	}
-}
-
-.img-span-img {
-	display: block;
-	margin: 0 0 0 auto;
-	transform: scale(0.9) translate(150px, -250px);
-	@media #{$media-mobile} {
-		margin: 0;
-		transform: scale(0.75) translate(-570px, -420px);
-	}
 }
 
 .block-quote {

@@ -10,16 +10,26 @@ is_hidden = 0
 <div class="banner">
 	Upcoming Events
 </div>
-<div class="content-centered">
-	<div class="container container-vertical">
-		{% component 'upcomingevents' %}
+<div class="container container-vertical content-centered">
+	{% for event in upcomingevents.events %}
+	<div class="item force-word-wrap">
+		<div class="item-title">{{ event.title }}</div>
+		<div class="details">{{ event.format_date }}</div>
+		<div class="details">{{ event.venue }}</div>
+		<div class="details">{{ event.description | raw}}</div>
 	</div>
+	{% endfor %}
 </div>
 <div class="banner">
 	Past Events
 </div>
-<div class="content-centered">
-	<div class="container container-vertical">
-		{% component 'pastevents' %}
+<div class="container container-vertical content-centered">
+	{% for event in pastevents.events %}
+	<div class="item force-word-wrap">
+		<div class="item-title">{{ event.title }}</div>
+		<div class="details">{{ event.format_date }}</div>
+		<div class="details">{{ event.venue }}</div>
+		<div class="details">{{ event.description | raw}}</div>
 	</div>
+	{% endfor %}
 </div>
