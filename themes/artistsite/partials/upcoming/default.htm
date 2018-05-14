@@ -1,0 +1,11 @@
+==
+<div class="container container-vertical content-centered">
+	{% for event in upcoming.events %}
+	<div class="item force-word-wrap">
+		<div class="item-title">{{ event.title }}</div>
+		<div class="details">{{ event.format_date }}</div>
+		<div class="details">{{ event.venue }}</div>
+		<div class="details">{{ event.description | raw}}</div>
+	</div>
+	{% endfor %}
+</div>

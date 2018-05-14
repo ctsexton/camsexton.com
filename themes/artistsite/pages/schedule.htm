@@ -3,35 +3,15 @@ url = "/schedule"
 layout = "base-wide"
 is_hidden = 0
 
-[upcomingevents]
+[upcomingevents upcoming]
 
-[pastevents]
+[pastevents past]
 ==
 <div class="banner">
 	Upcoming Events
 </div>
-
-<div class="container container-vertical content-centered">
-	{% for event in upcomingevents.events %}
-	<div class="item force-word-wrap">
-		<div class="item-title">{{ event.title }}</div>
-		<div class="details">{{ event.format_date }}</div>
-		<div class="details">{{ event.venue }}</div>
-		<div class="details">{{ event.description | raw}}</div>
-	</div>
-	{% endfor %}
-</div>
+{% component 'upcoming' %}
 <div class="banner">
 	Past Events
 </div>
-
-<div class="container container-vertical content-centered">
-	{% for event in pastevents.events %}
-	<div class="item force-word-wrap">
-		<div class="item-title">{{ event.title }}</div>
-		<div class="details">{{ event.format_date }}</div>
-		<div class="details">{{ event.venue }}</div>
-		<div class="details">{{ event.description | raw}}</div>
-	</div>
-	{% endfor %}
-</div>
+{% component 'past' %}
