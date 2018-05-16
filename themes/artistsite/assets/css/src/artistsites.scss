@@ -1,0 +1,39 @@
+/*
+ * ARTISTSITES PAGE
+ */
+
+// Main links
+
+#AS-heading {
+	margin: 150px 0 0 0;
+
+	@media#{$media-mobile} {
+		margin: 25px 0 0 0;
+		padding: 0 10px 0 10px;
+		font-size: 160%;
+	}
+}
+#AS-button {
+	margin: 50px 0 75px 0;
+
+	@media #{$media-mobile} {
+		margin: 10px 0 25px;
+	}
+}
+
+.AS-feature {
+	margin: 50px 0 50px 0;
+	display: flex;
+	justify-content: center;
+
+	li {
+		margin: 5px 0 5px 0;
+	}
+
+	@media #{$media-mobile} {
+		font-size: 80%;
+		ul {
+			margin: 0 5px 0 5px;
+		}
+	}
+}

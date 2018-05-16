@@ -1,3 +1,6 @@
+/*
+ * Site-wide CSS
+ */
 
 body {
 	background-image: $backgroundTexture;
@@ -145,25 +148,12 @@ a {
 #cts-body__blank {
 	width: 100%;
 	padding-top: 50px;
-
 }
 
 #cts-body__wide {
 	width: 100%;
 	padding-top: 50px;
 	@extend %cts-body;
-}
-
-#cts-pageTitle {
-	position: relative;
-	text-align: center;
-	font-family: $fontA;
-	font-size: 200%;
-	line-height: 100%;
-	color: $titlesColor;
-	padding-top: 50px;
-	margin-bottom: 25px;
-	z-index: -1;
 }
 
 #cts-mainContent {
@@ -182,7 +172,7 @@ a {
 .block-quote {
 	font-family: $fontB; 
 	font-weight: 400;
-	font-size: $std-fontSize * 2 + px;
+	font-size: $std-fontSize * 2.5 + px;
 	line-height: 150%;
 	@media #{$media-mobile} {
 		line-height: 125%;
@@ -199,7 +189,6 @@ a {
 .fat-big-text {
 	width: 100%; 
 	text-align: center; 
-	margin: 150px 0 150px 0;
 	@media #{$media-mobile} {
 		margin: 15px 0 15px 0;
 	}
@@ -213,5 +202,26 @@ a {
 		font-family: $fontB;
 		font-weight: 400;
 		line-height: 125%;
+	}
+}
+
+.big-button {
+	padding: 15px;
+	border: $borderColor_B 2px solid;
+	border-radius: 3px;
+	color: $buttonText;
+	background: $buttonBG;
+
+	@media #{$media-desktop}
+	{ 
+		font-size: 200%;
+		&:hover {
+			color: $buttonText-hover;
+			background: $buttonBG-hover;
+		}
+	}
+
+	@media #{$media-mobile} {
+		font-size: 125%;
 	}
 }

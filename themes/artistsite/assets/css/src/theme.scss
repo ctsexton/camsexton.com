@@ -1,11 +1,8 @@
 /*
+ * ArtistSite Basic Theme
  *
- * Cam Sexton
- * ArtistSite CSS Theme 1
- *
- * Owner: Cam Sexton
+ * Author: Cam Sexton
  * Date: May 2018
- * 
  *
  */
 
@@ -40,14 +37,23 @@ $splashColor: #ffffff;
 // headings, banners
 $banner-text-color: #fff; //#777;
 $banner-background: linear-gradient(90deg, rgba(230,180,10,0) 10%, rgba(230,180,10,1));
-//$banner-background: linear-gradient(90deg, rgba(115,95,80,0) 10%, rgba(115,95,80,1));
 $titlesColor: #000000;
+
+// borders
+$borderColor_A: white;
+$borderColor_B: black;
 
 // nav variables
 $navBackground: var(--navBar-background);
 $navBackground--transparent: rgba(0,0,0,0.85);
 $navBackground-gradient: #000000;
 $menuColor: #ffffff;
+
+// button colors
+$buttonText: black;
+$buttonText-hover: white;
+$buttonBG: transparent;
+$buttonBG-hover: black;
 
 // general text colors
 $contentColor_A: #000000;
@@ -64,17 +70,3 @@ $scheduleItem-background__hover: rgba(0, 0, 0, 0.35);
 
 $media-mobile: "(max-width: 1000px)";
 $media-desktop: "(min-width: 1000px)";
-
-/*
- * IMPORTS
- * Make sure to keep these in order to maintain cascade.
- */
-
-@import "reset";
-@import "base_elements";
-@import "navigation";
-@import "landing_page";
-@import "about";
-@import "contact";
-@import "schedule";
-@import "media";

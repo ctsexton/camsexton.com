@@ -4,19 +4,11 @@ layout = "base-wide"
 is_hidden = 0
 ==
 <div> 
-	<div class="fat-big-text">
-		<span class="block-quote">Simple, beautiful... <b>easy to maintain</b><br> websites for artists.</span>
-		
+	<div id="AS-heading" class="fat-big-text block-quote">
+		Simple, refined... <b>easy to maintain</b><br> websites for artists.
 	</div>
-	{% partial "divider" %}
-</div>
-<div>
-	<div style="margin: 50px 10px 50px 10px;display:flex;justify-content:center;">
-		<ul class="standard-text">
-			<li>Responsive design, looks great on any device.</li>
-			<li>Web hosting included.</li>
-			<li>Manage your site with OctoberCMS, a modern and simple Content Manager.</li>
-		</ul>
+	<div id="AS-button" class="container container-horizontal content-centered">
+		<a class="big-button" href="{{ navlinks.contact }}">Get Yours &#8594</a>
 	</div>
 	{% partial "divider" %}
 </div>
@@ -47,4 +39,15 @@ is_hidden = 0
 		</div>
 	</div>
 
+</div>
+{% partial "divider" %}
+<div class="subheading">
+	OctoberCMS - a <b>modern</b> and <b>simple</b> content manager for your website.
+</div>
+{% partial "divider" %}
+<div id="AS-features">
+	<ul class="standard-text">
+		<li>Responsive design, looks great on any device.</li>
+		<li>Web hosting included.</li>
+	</ul>
 </div>

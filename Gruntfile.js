@@ -7,7 +7,7 @@ module.exports = function(grunt) {
           style:'compressed'
         },
         files: {
-          'themes/artistsite/assets/css/styles.css' : 'themes/artistsite/assets/css/input.scss'
+          'themes/artistsite/assets/css/styles.css' : 'themes/artistsite/assets/css/src/input.scss'
         }
       }
     },
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     },
     watch: {
       css: {
-        files: 'themes/artistsite/assets/css/*.scss',
+        files: 'themes/artistsite/assets/css/src/*.scss',
         tasks: ['sass', 'autoprefixer']
       }
     }
