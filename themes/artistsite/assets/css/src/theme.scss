@@ -22,7 +22,6 @@
 // fonts
 $fontA: 'Raleway', sans-serif;
 $fontB: 'Karla', sans-serif;
-$std-fontSize: 25;
 
 
 // default background variables
@@ -70,3 +69,7 @@ $scheduleItem-background__hover: rgba(0, 0, 0, 0.35);
 
 $media-mobile: "(max-width: 1000px)";
 $media-desktop: "(min-width: 1000px)";
+$small: "screen and (max-width: 480px)";
+$medium: "screen and (min-width: 481px)";
+$large: "screen and (min-width: 901px)";
+$huge: "screen and (min-width: 1200px)";

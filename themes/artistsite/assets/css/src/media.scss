@@ -2,55 +2,101 @@
  * MEDIA PAGE
  */
 
-.media-item {
-	width: 700px;
-	margin: 15px;
-	box-shadow: 5px 5px 20px #aaa;
-	@media #{$media-mobile} {
-		width: 100%;
-	}
-}
-.video {
-	display: inline-block;
-	height: 393px;
-	@media #{$media-mobile} {
-		height: 100%;
-	}
-}
-
-.soundcloud {
-	&-large {
-		height: 700px;
-		@media #{$media-mobile} {
-		height: 450px;
-		}
-	}
-	&-small {
-		height: 450px;
-		@media #{$media-mobile} {
-			height: 450px;
-		}
-	}
-}
-
-#surface-album {
-	height: 1070px;
-	@media #{$media-mobile} {
-		width: 300px;
-		height: 500px;
-	}
-}
-
-.container-vertical-leftside {
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-end;
-	@media #{$media-mobile} {
-		align-items: center;
-	}
-}
-.container-horizontal-center {
-	flex-direction: row;
+.media-container {
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
+	width: 95%;
+	margin: 0 auto;
+	@media screen and (min-width: 751px) {
+		width: 98%;
+	}
+}
+
+.media-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.video-wrapper {
+	display: block;
+	width: 100%;
+	margin: 5px auto;
+	@media screen and (min-width: 751px) {
+		margin: 10px;
+		height: 395px;
+		width: 700px;
+	}
+}
+
+.video-ratio {
+	display: block;
+	position: relative;
+	padding-bottom: 56.25%; // Resizable at 16:9 aspect ratio
+	height: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.bandcamp-wrapper {
+	display: block;
+	width: 100%;
+	margin: 5px auto;
+	@media screen and (min-width: 751px) {
+		padding: 0;
+		margin: 10px;
+		height: 1050px;
+		width: 700px;
+	}
+}
+
+.bandcamp-ratio {
+	display: block;
+	position: relative;
+	padding-bottom: 150%; // Resizable nice ratio
+	height: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.soundcloud-wrapper {
+	display: block;
+	height: 800px;
+	width: 100%;
+	margin: 0 auto;
+	@media screen and (min-width: 751px) {
+		width: 700px;
+		margin: 0 10px;
+	}
+}
+
+.soundcloud-container__image {
+	display: block;
+	position: relative;
+	height: 450px;
+	width: 100%;
+	overflow: hidden;
+	margin: 5px 0;
+	@media screen and (min-width: 751px) {
+		margin: 10px 0;
+		width: 700px;
+	}
+}
+
+.soundcloud-container__player {
+	display: block;
+	position: relative;
+	height: 350px;
+	width: 100%;
+	overflow: hidden;
+	margin: 5px 0;
+	@media screen and (min-width: 751px) {
+		margin: 10px 0;
+		height: 350px;
+		width: 700px;
+	}
 }

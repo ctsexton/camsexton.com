@@ -1,5 +1,5 @@
 /*
- * Site-wide CSS
+ * Main CSS
  */
 
 body {
@@ -7,7 +7,6 @@ body {
 	background-repeat: repeat;
 	background-attachment: scroll;
 	font-family: $fontB;
-	font-size: $std-fontSize + px;
 	font-weight: 600;
 	color: $contentColor_A;
 }
@@ -30,14 +29,11 @@ a {
 	width: 100%;
 	background: $banner-background;
 	color: $banner-text-color;
-	font-size: 200%;
+	font-size: 1.5rem;
 	font-weight: 200;
-	padding: 20px;
+	padding: 10px;
 	text-align: right;
-	@media #{$media-mobile} {
-		font-size: 100%;
-		padding: 10px;
-	}
+	
 	&-fixed {
 		position: fixed;
 		top: 50px;
@@ -45,78 +41,98 @@ a {
 }
 
 .content-centered {
-	width: 100%;
-	padding: 0 25% 0 25%;
+	width: 66%;
+	margin: 0 auto;
 	@media #{$media-mobile} {
+		width: 100%;
 		margin: 0;
 		padding: 0;
 	}
 }
+
+
+/*
+ * Flex Container Classes
+ */
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .container-horizontal {
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: flex-start;
 }
+
 .container-vertical {
 	flex-direction: column;	
 	justify-content: center;
 	align-items: space-around;
 }
+
 .container-fullWidth {
 	width: 100%;
 }
+
 .container-halfWidth {
 	width: 50%;
 	@media #{$media-mobile} {
 		width: 100%;
 	}
 }
-.container {
-	display: flex;
-	flex-wrap: wrap;
 
-	> .item {
-		background: white;
-		box-shadow: 5px 5px 20px #aaa;
-		margin: 30px;
-		padding: 30px;
-		flex-basis: 45%;
-		> .item-title {
-			font-weight: 200;
+
+.item {
+	margin: 15px;
+	padding: 15px;
+	flex-basis: auto;
+	font-size: 1rem;
+	flex-grow: 1;
+
+	&-title {
+		font-weight: 200;
+		font-size: 1.5em;
+	}
+	&-subtitle {
+		font-size: 1.15em;
+		margin: 10px 0 10px 0;
+	}
+	&-details {
+		font-size: 1em;
+		font-weight: 200;
+		margin: 10px 0 10px 0;
+		line-height: 125%;
+		> a {
+			color: black;
+			font-weight: 400;
 		}
-		.subtitle {
-			font-size: 75%;
-			margin: 10px 0 10px 0;
-		}
-		> .details {
-			font-size: 75%;
-			font-weight: 200;
-			margin: 10px 0 10px 0;
-			line-height: 125%;
-			> a {
-				color: black;
-				font-weight: 400;
-			}
-			> ul {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-between;
-				li {
-					margin-right: 10px;
-				}
+		> ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			li {
+				margin: 5px 10px 5px 0;
 			}
 		}
 	}
-	> .item-wide {
-		flex-basis: 75%;
-	}
-	@media #{$media-mobile} {
-		> .item {
-			flex-basis: auto;
-			font-size: 75%;
-			padding: 15px;
-			margin: 15px;
-		}
+}
+
+.sticky {
+	background: white;
+	box-shadow: 5px 5px 20px #aaa;
+}
+
+.item-wide {
+	flex-basis: 75%;
+}
+@media #{$media-mobile} {
+	.item {
+		flex-basis: auto;
+		font-size: 0.75rem;
+		padding: 15px;
+		margin: 15px;
 	}
 }
 
@@ -156,15 +172,6 @@ a {
 	@extend %cts-body;
 }
 
-#cts-mainContent {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	font-size: 80%;
-	letter-spacing: 0.05em;
-	color: $contentColor_A;
-}
-
 #cts-footer {
 	padding: 0;
 }
@@ -172,7 +179,7 @@ a {
 .block-quote {
 	font-family: $fontB; 
 	font-weight: 400;
-	font-size: $std-fontSize * 2.5 + px;
+	font-size: 2.5rem;
 	line-height: 150%;
 	@media #{$media-mobile} {
 		line-height: 125%;
@@ -180,7 +187,7 @@ a {
 }
 
 .subheading {
-	font-size: $std-fontSize * 1.5 + px;
+	font-size: 1.5rem;
 	text-align: center;
 	padding: 20px 0 20px 0;
 	font-weight: 400;
@@ -214,7 +221,7 @@ a {
 
 	@media #{$media-desktop}
 	{ 
-		font-size: 200%;
+		font-size: 2rem;
 		&:hover {
 			color: $buttonText-hover;
 			background: $buttonBG-hover;
@@ -222,6 +229,6 @@ a {
 	}
 
 	@media #{$media-mobile} {
-		font-size: 125%;
+		font-size: 1.25rem;
 	}
 }
