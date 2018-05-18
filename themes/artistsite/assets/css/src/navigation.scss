@@ -26,14 +26,14 @@
 		letter-spacing: 0.05em;
 		line-height: 100%;
 		font-family: $fontB;
-		font-size: 100%;
+		font-size: 1.25rem;
 		font-weight: 600;
 		color: $menuColor;
 		text-align: left;
 		border: solid 3px transparent;
 		padding-left: 15px;
 		@media #{$media-mobile} {
-			font-size: 80%;
+			font-size: 1rem;
 			padding-left: 5px;
 		}
 	}
@@ -42,7 +42,7 @@
 		display: flex;
 		align-items: center;
 		font-family: $fontA; 
-		font-size: 65%;
+		font-size: 0.75rem;
 		background-color: transparent;
 		justify-content: flex-start;
 		flex-wrap: nowrap;
@@ -85,7 +85,7 @@
 	letter-spacing: 0.05em;
 	text-align: right;
 	font-family: $fontB;
-	font-size: 80%;
+	font-size: 1rem;
 	cursor: pointer;
 	@media #{$media-mobile} {
 		display: inline-block;
@@ -201,7 +201,7 @@
 			transition: padding-top 500ms;
 			background: $navBackground;
 			min-width: 160px;
-			font-size: 90%;
+			font-size: 0.7rem;
 			letter-spacing: 0.06em;
 
 			> li {

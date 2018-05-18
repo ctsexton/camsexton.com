@@ -1,11 +1,11 @@
 ==
-<div class="container container-vertical content-centered">
+<div class="container container-vertical">
 	{% for event in past.events %}
-	<div class="item force-word-wrap">
-		<div class="item-title">{{ event.title }}</div>
-		<div class="details">{{ event.format_date }}</div>
-		<div class="details">{{ event.venue }}</div>
-		<div class="details">{{ event.description | raw}}</div>
+	<div class="events-item sticky force-word-wrap">
+		<div class="events-item--title">{{ event.title }}</div>
+		<div class="events-item--details">{{ event.format_date }}</div>
+		<div class="events-item--details">{{ event.venue }}</div>
+		<div class="events-item--details">{{ event.description | raw}}</div>
 	</div>
 	{% endfor %}
 </div>

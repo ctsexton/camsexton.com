@@ -2,7 +2,7 @@
  * ABOUT PAGE
  */
 
-.top-layer {
+.about--layer {
 	background-image: $backgroundTexture; 
 	background-repeat: repeat;
 	margin-top: 300px;
@@ -30,5 +30,14 @@
 	@media #{$medium} {
 		margin: 0 0 0 auto;
 		transform: scale(0.9) translate(150px, -250px);
+	}
+}
+
+@media #{$large} {
+	.about--item {
+		max-width: 45%;
+		&__wide {
+			max-width: 75%;
+		}
 	}
 }
