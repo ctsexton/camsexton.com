@@ -1,83 +1,19 @@
 <form method="POST" class="contact-form" data-request="onSend" data-request-validate>
 	<div id="formContent">
-		<div id="contact-inputs">
-			Your Name:<br>
-			<input type="text" name="name" autofocus>
-			<div data-validate-for="name"></div>
-			<br>
-			Your Email:<br>
-			<input type="text" name="email">
-			<div data-validate-for="email"></div>
-			<br>
-			What can I do for you?
-			<div id="cts-radioButtons">
-
-				<input type="radio" class="check" name="work" id="web" />
-				<label for="web">Web Design</label> <br>
-
-				<input type="radio" class="check" name="work" id="audio" />
-				<label for="audio">Recording/Mixing</label><br>
-
-				<input type="radio" class="check" name="work" id="gig" />
-				<label for="gig">Live Performance</label><br>
-
-				<input type="radio" class="check" name="work" id="other" />
-				<label for="other">Other</label><br>
+		<div>
+			<div id="contact-inputs">
+				Your Name:<br>
+				<input type="text" name="name">
+				<div data-validate-for="name"></div>
+				<br>
+				Your Email:<br>
+				<input type="text" name="email">
+				<div data-validate-for="email"></div>
+				<br>
 			</div>
+			<div>Message:</div>
+			<textarea name="content" cols="50" rows="7">Hi Cam,</textarea><br>
+			<button data-attach-loading>Submit</button>
 		</div>
-		<div id="contact-info" class="contact-info__invisible">
-		</div>
-		Message:<br>
-		<textarea name="content" cols="50" rows="7">Hi Cam,</textarea><br>
-		<button data-attach-loading>Submit</button>
 	</div>
 </form>	
-<script>
-
-var contactInfo = document.getElementById("contact-info");
-
-function revealHTML (id, htmlString) {
-	document.getElementById(id).addEventListener("click",
-		function() {
-			window.contactInfo.setAttribute("class", "contact-info__visible");
-			window.contactInfo.innerHTML = htmlString;
-		});
-}
-
-var webOption = `
-		Include these to speed up the process:<br>
-			<ul>
-			<li> - photos (link to a folder of quality images)</li>
-			<li> - text/bio information</li>
-			<li> - your product... where can I see/hear/buy it?</li>
-			<li> - summary of pages to include</li>
-			<li> - links to other websites you love</li>
-		</ul>`;
-var audioOption = `
-	Available for:<br>
-	<ul>
-		<li> - recording/mixing live shows</li>
-		<li> - studio recordings</li>
-		<li> - designing & programming software instruments</li>
-	</ul>
-	`;
-var gigOption = `
-	I play these instruments:<br>
-	<ul>
-		<li> - drums</li>
-		<li> - controllers (grids, touchpads, etc.)</li>
-	</ul>
-	`;
-var otherOption = `
-	I also do things like:<br>
-	<ul>
-		<li> - teaching (drums, programming)</li>
-		<li> - writing and arranging music</li>
-	</ul>
-`;
-
-window.revealHTML("web", window.webOption);
-window.revealHTML("audio", window.audioOption);
-window.revealHTML("gig", window.gigOption);
-window.revealHTML("other", window.otherOption);
-</script>
