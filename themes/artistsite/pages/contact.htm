@@ -7,34 +7,30 @@ is_hidden = 0
 ==
 <div class="spacer-50"></div>
 <div class="AS--heading-top">What can I <b>do</b> for you?</div>
+<div class="spacer-50"></div>
 <div class="buttons-array">
-	<div>Website Quote</div>
-	<div>Recording/Mixing</div>
-	<div>Live Performance</div>
-	<div>Other</div>
+	<div id="web">Website Quote</div>
+	<div id="audio">Recording/Mixing</div>
+	<div id="gig">Live Performance</div>
+	<div id="other">Other</div>
 </div>
-<div class="secret">
-		Include these to speed up the process:<br>
-			<ul>
-			<li> - photos (link to a folder of quality images)</li>
-			<li> - text/bio information</li>
-			<li> - your product... where can I see/hear/buy it?</li>
-			<li> - summary of pages to include</li>
-			<li> - links to other websites you love</li>
-		</ul>
+<div class="spacer-50"></div>
+<div id="option" class="secret">
 </div>
 <div class="container container-centered">
 {% component 'contactform' %}
 </div>
+<div class="spacer-50"></div>
+<div class="spacer-50"></div>
+<div class="spacer-50"></div>
 <script>
-
-var contactInfo = document.getElementById("contact-info");
 
 function revealHTML (id, htmlString) {
 	document.getElementById(id).addEventListener("click",
 		function() {
-			window.contactInfo.setAttribute("class", "contact-info__visible");
-			window.contactInfo.innerHTML = htmlString;
+			var div = document.getElementById("option");
+			div.classList.toggle("opensecret");
+			div.innerHTML = htmlString;
 		});
 }
 
