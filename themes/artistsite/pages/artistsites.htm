@@ -3,47 +3,77 @@ url = "/artistsites"
 layout = "base-wide"
 is_hidden = 0
 ==
-<div> 
-	<div id="AS-heading" class="fat-big-text block-quote">
+<div id="AS--content-wrapper">
+	<div class="AS--spacer-top"></div>
+	<div class="AS--heading-top AS--heading-wrapper">
 		Simple, refined... <b>easy to maintain</b><br> websites for artists.
 	</div>
 	<div id="AS-button" class="container container-horizontal content-centered">
 		<a class="big-button" href="{{ navlinks.contact }}">Get Yours &#8594</a>
 	</div>
 	{% partial "divider" %}
-</div>
-<div class="subheading" style="margin: 50px 0 50px 0">
-	Update your gig list from <b>anywhere</b> with Google Calendar.
-</div>
-<div class="container container-horizontal" style="justify-content: center">
-		<div class="standard-text"> 
-		A typical entry includes:
-		<ul style="padding: 20px">
-			<li>Gig Title</li>
-			<li>Time/Date</li>
-			<li>Venue (links to Google Maps)</li>
-			<li>Optional description with further details</li>
-		</ul>
-		</div>
-		<div class="item sticky force-word-wrap" style="max-width: 350px">
-			<div class="item-title">Cam Sexton Sextet</div>
-			<div class="item-details">
-				Wed May 09 at 8:00pm<br>
-				London O2 Arena<br>
-				My band will be busking out the front of the arena. Please come.<br>
-				<a href="http://www.google.com">Tickets</a>
+	<div class="AS--heading AS--heading-wrapper">
+		Update your gigs from <b>anywhere</b> with Google Calendar.
+	</div>
+	<div class="AS--spacer-25"></div>
+	<div class="container container-horizontal" style="justify-content: center">
+			<div class="AS--text-box" style="max-width: 400px"> 
+				Sync your calendar to automatically display upcoming shows in a neatly formatted list: 
+			</div>
+			<div class="AS--spacer-25"></div>
+			<div class="item sticky force-word-wrap" style="max-width: 400px">
+				<div class="item-title">Your Band</div>
+				<div class="item-details">
+					Wed May 09 at 8:00pm<br>
+					London O2 Arena<br>
+					We will be busking out the front for 2 hours. Please bring a donation!<br>
+					<a href="http://www.google.com">Tickets</a>
+				</div>
+			</div>
+
+	</div>
+	<div class="AS--spacer-50"></div>
+	{% partial "divider" %}
+	<div class="AS--spacer-50"></div>
+	<a class="AS--logo" href="https://octobercms.com/"><img class="AS--logo-img" src="storage/app/media/october-logo-transparent.svg"></img></a>
+	<div class="AS--heading AS--heading-wrapper">
+		A <b>modern</b> and <b>simple</b> content manager for your website.
+	</div>
+	<div class="AS--spacer-50"></div>
+	{% partial "divider" %}
+	<div class="AS--spacer-50"></div>
+	<div class="AS--logo" href="https://octobercms.com/"><img class="AS--logo-img" src="storage/app/media/RWD.svg"></img></div>
+	<div class="AS--heading AS--heading-wrapper">
+		<b>Responsive</b> Design:<br> your site optimized for <b>every</b> device.
+	</div>
+	<div class="AS--spacer-50"></div>
+	{% partial "divider" %}
+	<div class="container container-centered">
+		<div class="AS--item">
+			<div class="AS--heading AS--heading-wrapper">
+				<b>Costs</b> Outline:
+			</div>
+			<div class="AS--spacer-25"></div>
+			<div class="AS--text-box" style="max-width: 500px; margin: 0 auto;">
+				<ul>
+					<li>- Domain registration (in your name).</li>
+					<li>- Initial design fee.</li>
+					<li>- Web Hosting & Maintenance for US$10/month.</li>
 			</div>
 		</div>
-
-</div>
-{% partial "divider" %}
-<div class="subheading">
-	OctoberCMS - a <b>modern</b> and <b>simple</b> content manager for your website.
-</div>
-{% partial "divider" %}
-<div id="AS-features">
-	<ul class="standard-text">
-		<li>Responsive design, looks great on any device.</li>
-		<li>Web hosting included.</li>
-	</ul>
+		<div class="AS--item"> 
+			<div class="AS--heading AS--heading-wrapper">
+				<b>Support</b>:
+			</div>
+			<div class="AS--spacer-25"></div>
+			<div class="AS--text-box" style="max-width: 500px; margin: 0 auto;">
+				<ul>
+					<li>- My help and advice at every step in the process to getting your site online.</li>
+					<li>- Ongoing support to keep your site running smoothly.</li>
+			</div>
+		</div>
+		</div>
+	<div id="AS-button" class="container container-horizontal content-centered">
+		<a class="big-button" href="{{ navlinks.contact }}">Get A Quote &#8594</a>
+	</div>
 </div>

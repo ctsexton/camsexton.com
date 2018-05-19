@@ -102,6 +102,12 @@ a {
 	align-items: flex-start;
 }
 
+.container-centered {
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+
 .container-vertical {
 	width: 100%;
 	flex-direction: column;	

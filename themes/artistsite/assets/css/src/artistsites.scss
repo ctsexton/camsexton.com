@@ -4,36 +4,90 @@
 
 // Main links
 
-#AS-heading {
-	margin: 150px 0 0 0;
-
-	@media#{$media-mobile} {
-		margin: 25px 0 0 0;
-		padding: 0 10px 0 10px;
-		font-size: 160%;
-	}
+#AS--content-wrapper {
+	width: 95%;
+	margin: 0 auto;
 }
-#AS-button {
-	margin: 50px auto 75px;
 
-	@media #{$media-mobile} {
-		margin: 10px auto 25px;
+.AS--spacer-top {
+	min-height: 50px;
+	@media #{$large} {
+		min-height: 150px;
 	}
 }
 
-.AS-feature {
-	margin: 50px 0 50px 0;
-	display: flex;
-	justify-content: center;
-
-	li {
-		margin: 5px 0 5px 0;
-	}
-
-	@media #{$media-mobile} {
-		font-size: 80%;
-		ul {
-			margin: 0 5px 0 5px;
+@media #{$large} {
+	.AS--item {
+		max-width: 30%;
+		margin: 0 30px;
+		&__wide {
+			max-width: 40%;
 		}
+	}
+}
+
+.AS--heading-top {
+	font-size: 1.6rem;
+	font-family: $fontB;
+	font-weight: 400;
+	line-height: 1.25em;
+	text-align: center;
+	@media #{$medium} {
+		font-size: 2.5rem;
+	}
+}
+
+.AS--heading {
+	font-size: 1.6rem;
+	font-family: $fontB;
+	font-weight: 400;
+	line-height: 1.25em;
+	text-align: center;
+}
+
+.AS--heading-wrapper {
+	margin: 50px auto 0;
+	width: 100%;
+}
+
+#AS-button {
+	margin: 50px auto 50px;
+
+	@media #{$medium} {
+		margin: 50px auto 75px;
+	}
+}
+
+.AS--spacer-50 {
+	min-height: 50px;
+	margin: 0;
+	padding: 0;
+}
+
+.AS--spacer-25 {
+	min-height: 25px;
+	margin: 0;
+	padding: 0;
+}
+.AS--logo {
+	width: 100%;
+	max-width: 500px;
+	display: block;
+	margin: 0 auto;
+}
+
+.AS--logo-img {
+	width: 100%;
+	max-width: 500px;
+	display: block;
+}
+
+.AS--text-box {
+	font-size: 1em;
+	font-weight: 400;
+	text-align: left;
+	line-height: 1.5em;
+	li {
+		line-height: 1.5em;
 	}
 }
