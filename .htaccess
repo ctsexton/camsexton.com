@@ -5,6 +5,7 @@
     </IfModule>
 
     RewriteEngine On
+	RewriteRule ^index\.html?$ index.php [NC,R,L]
 
     ##
     ## You may need to uncomment the following line for some hosting environments,
