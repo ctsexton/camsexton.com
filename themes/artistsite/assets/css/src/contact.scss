@@ -34,10 +34,11 @@
 		border-radius: 3px;
 		color: $buttonText;
 		background: $buttonBG;
-		&:hover {
-			color: $buttonText-hover;
-			background: $buttonBG-hover;
-
+		@media #{$large} {
+			&:hover {
+				color: $buttonText-hover;
+				background: $buttonBG-hover;
+			}
 		}
 		@media screen and (min-width: 900px) {
 			width: auto;
@@ -66,7 +67,7 @@
 }
 .opensecret {
 	margin: 25px auto 10px;
-	height: 7.25em;
+	height: 10em;
 	opacity: 1;
 	@media screen and (min-width: 900px) {
 		height: 6em;
