@@ -14,7 +14,6 @@ is_hidden = 0
 	<div id="gig">Live Performance</div>
 	<div id="other">Other</div>
 </div>
-<div class="spacer-50"></div>
 <div id="option" class="secret">
 </div>
 <div class="container container-centered">
@@ -23,14 +22,35 @@ is_hidden = 0
 <div class="spacer-50"></div>
 <div class="spacer-50"></div>
 <div class="spacer-50"></div>
+<div class="spacer-50"></div>
 <script>
+
+var previousOption = null;
+var optionState = 0;
 
 function revealHTML (id, htmlString) {
 	document.getElementById(id).addEventListener("click",
 		function() {
 			var div = document.getElementById("option");
-			div.classList.toggle("opensecret");
-			div.innerHTML = htmlString;
+			var button = document.getElementById(this.id);
+			var previousOption = document.getElementById(window.previousOption);
+			if (optionState === 0) {
+				div.innerHTML = htmlString;
+				div.classList.add("opensecret");
+				button.classList.add("highlightButton");
+				window.previousOption = this.id;
+				window.optionState = 1;
+			} else if (optionState === 1 && this.id != window.previousOption) {
+				div.innerHTML = htmlString;
+				previousOption.classList.remove("highlightButton");
+				button.classList.add("highlightButton");
+				window.previousOption = this.id;
+			} else {
+				div.classList.remove("opensecret");
+				previousOption.classList.remove("highlightButton");
+				button.classList.remove("highlightButton");
+				window.optionState = 0;
+			}
 		});
 }
 
