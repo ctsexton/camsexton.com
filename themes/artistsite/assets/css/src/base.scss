@@ -241,30 +241,6 @@ a {
 	}
 }
 
-.buttons-array {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	font-size: 0.5rem;
-	@media #{$medium} {
-		font-size: 1.5rem;
-	}
-	> div {
-		padding: 10px;
-		margin: 10px;
-		cursor: pointer;
-		border: $borderColor_B 2px solid;
-		border-radius: 3px;
-		color: $buttonText;
-		background: $buttonBG;
-		&:hover {
-			color: $buttonText-hover;
-			background: $buttonBG-hover;
-
-		}
-	}
-}
-
 .spacer-50 {
 	min-height: 50px;
 	margin: 0;
