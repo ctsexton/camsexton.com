@@ -115,6 +115,13 @@ a {
 	align-items: flex-start;
 }
 
+.container-vertical-centered {
+	width: 100%;
+	flex-direction: column;	
+	justify-content: flex-start;
+	align-items: center;
+}
+
 .container-fullWidth {
 	width: 100%;
 }

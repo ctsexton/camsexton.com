@@ -3,6 +3,7 @@
  */
 
 .CT--heading-top {
+	width: 100%;
 	font-size: 1.6rem;
 	font-family: $fontB;
 	font-weight: 400;
@@ -16,6 +17,7 @@
 }
 
 .CT--buttons-array {
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -55,23 +57,23 @@
 	display: block;
 	overflow: hidden;
 	width: 95%;
+	max-width: 400px;
 	font-size: 1em;
-	margin: 0px auto 0px;
-	height: 0;
+	margin: 0 auto;
+	height: 0em;
 	opacity: 0;
 	transition: margin 500ms, opacity 500ms, height 500ms;
 	@media screen and (min-width: 900px) {
-		width: 35%;
+		max-width: 800px;
 		font-size: 1.5em;
+
 	}
 }
+
 .opensecret {
 	margin: 25px auto 10px;
-	height: 10em;
+	height: auto;
 	opacity: 1;
-	@media screen and (min-width: 900px) {
-		height: 6em;
-	}
 }
 
 .force-scroll {
@@ -80,12 +82,13 @@
 
 // CONTACT FORM PLUGIN
 .contact-form {
-	display: inline-block;
+	display: block;
 	padding: 30px;
-	width: 50%;
+	width: 100%;
+	max-width: 900px;
 	background: white;
 	box-shadow: 3px 3px 10px grey;
-	margin-top: 30px;
+	margin: 30px auto 0;
 	letter-spacing: 0.05em;
 	font-weight: 200;
 	font-size: 100%;
@@ -100,7 +103,7 @@
 	}
 	input[type="text"] {
 		@media #{$large} {
-			width: 45%;
+			width: 50%;
 		}
 	}
 	button {
