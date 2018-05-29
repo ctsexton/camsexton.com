@@ -1,32 +1,35 @@
-function AnimateBG (canvas) {
+function AnimateBG () {
 	self = this;
+	var canvas = document.getElementById('canvas');
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+	var rain = Array();
+	var columns = 40;
 	this.terminate = false;
-	var canvasWidth = canvas.width;
-	var canvasHeight = canvas.height;
-	var columns = 30;
 
 	var Droplet = function(index, columns, width, height) {
 		this.index = index;
 		this.columns = columns;
 		this.x = (width / columns) * (index + getRandomInt(0, 100) * 0.01);
 		this.y = getRandomInt(height * -1, 0);
-		this.rate = getBiasedInt(0, 100, 25, 1) * width / 1920 * 0.5;
+		this.rate = getBiasedInt(0, 100, 25, 1) * width / 1920 * 0.15;
 		this.opacity = getBiasedInt(10, 90, 50, 1) * 0.01;
 		this.length = getRandomInt(height / 5, height);
 		this.minSpeed = getRandomInt(2,10);
 	}
 
-	var rain = Array();
+	// set up rain droplets
 	this.init = function() {
 		for (var index = 0; index < columns; index++) {
-			rain.push(new Droplet(index, columns, canvasWidth, canvasHeight));
+			rain.push(new Droplet(index, columns, canvas.width, canvas.height));
 		}
 	}
 
+	// main animation loop
 	this.draw = function() {
 		var ctx = canvas.getContext('2d');
 
-		ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 		rain = rain.map(function(drop) {
 			var x = drop.x;
@@ -43,7 +46,7 @@ function AnimateBG (canvas) {
 			ctx.strokeStyle=grd;
 
 			// if drop end onscreen and above minSpeed, gradually deccelerate
-			if (y <= canvasHeight) {
+			if (y <= canvas.height) {
 				ctx.moveTo(x, y - length);
 				ctx.lineTo(x, y);
 				ctx.stroke();
@@ -53,9 +56,9 @@ function AnimateBG (canvas) {
 			}
 
 			// if drop end offscreen, accelerate
-			if (y > canvasHeight) {
+			if (y > canvas.height) {
 				ctx.moveTo(x, y - length);
-				ctx.lineTo(x, canvasHeight);
+				ctx.lineTo(x, canvas.height);
 				ctx.stroke();
 				drop.rate = rate * 1.02;
 			}
@@ -63,8 +66,8 @@ function AnimateBG (canvas) {
 			// increment Y position by rate
 			drop.y = y + rate;
 
-			if (y > canvasHeight + length) {
-				return new Droplet(drop.index, drop.columns, canvasWidth, canvasHeight);
+			if (y > canvas.height + length) {
+				return new Droplet(drop.index, drop.columns, canvas.width, canvas.height);
 			}
 			return drop;
 		});
@@ -72,7 +75,7 @@ function AnimateBG (canvas) {
 			return;
 		}
 
-		setTimeout(self.draw, 50);
+		window.requestAnimationFrame(self.draw);
 	}
 
 	// get random integer
@@ -87,16 +90,9 @@ function AnimateBG (canvas) {
 		return rnd * (1 - mix) + bias * mix;
 	};
 }
-
-function setupCanvas () {
-	var canvas = document.getElementById('canvas');
-	canvas.width = screen.width;
-	canvas.height = screen.height;
-	var background = new AnimateBG(canvas);
-	window.onload = function () {
-		background.init();
-		background.draw();
-	};
-}
-
-setupCanvas();
+// Start animation on window load
+var backgroundAnimation = new AnimateBG();
+window.onload = function () {
+	backgroundAnimation.init();
+	backgroundAnimation.draw();
+};
