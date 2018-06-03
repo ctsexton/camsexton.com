@@ -3,8 +3,7 @@
  *
  */
 
-
-nav {
+.nav {
 	position: fixed;
 	top: 0;
 	height: 50px;
@@ -24,6 +23,7 @@ nav {
 
 .nav--main-list {
 	position: absolute;
+	left: 0;
 	top: 50px;
 	display: block;
 	list-style-type: none;
@@ -155,12 +155,11 @@ nav {
 	border-bottom: solid 1px #555555;
 	transition: padding 500ms, height 500ms, opacity 500ms, border-bottom 500ms, border-top 500ms;
 	@media #{$large} {
-		opacity: 1;
-		padding: 0;
 		height: 0;
+		padding: 0;
 		border: none;
 		visibility: visible;
-		transition: none;
+		transition: height 500ms;
 	}
 }
 
@@ -174,7 +173,7 @@ nav {
 	transition: padding 500ms, height 500ms, opacity 500ms, border-bottom 500ms, border-top 500ms, visibility 500ms linear 500ms;
 	@media #{$large} {
 		height: 0;
-		padding: 0 0 0 0;
+		padding: 0;
 		border: none;
 		visibility: visible;
 		transition: height 500ms;
@@ -231,6 +230,7 @@ nav {
 }
 
 #menu-button {
+	position: relative;
 	display: inline-block;
 	margin-right: 5px;
 	letter-spacing: 0.05em;

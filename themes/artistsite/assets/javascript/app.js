@@ -16,13 +16,11 @@ function Menu() {
 
 	$('#menu-button').on('click', function() {
 		if (menuState == 0) {
-			console.log("open!");
 			$('#nav--main-list').removeClass('nav--main-list__close');
 			$('#nav--main-list').addClass('nav--main-list__open');
 			$('#menu-button').html("close");
 			menuState = 1;
 		} else {
-			console.log("close!");
 			$('#nav--main-list').addClass('nav--main-list__close');
 			$('#nav--main-list').removeClass('nav--main-list__open');
 			$('#dropdown--content').addClass('dropdown--content__closed');
@@ -33,12 +31,10 @@ function Menu() {
 	});
 	$('#dropdown--button').on('click', function() {
 		if (menuState == 1) {
-			console.log("open dropdown");
 			$('#dropdown--content').removeClass('dropdown--content__closed');
 			$('#dropdown--content').addClass('dropdown--content__open');
 			menuState = 2;
 		} else {
-			console.log("close dropdown");
 			$('#dropdown--content').addClass('dropdown--content__closed');
 			$('#dropdown--content').removeClass('dropdown--content__open');
 			menuState = 1;
