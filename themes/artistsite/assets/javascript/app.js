@@ -18,14 +18,14 @@ function Menu() {
 		if (menuState == 0) {
 			$('#nav--main-list').removeClass('nav--main-list__close');
 			$('#nav--main-list').addClass('nav--main-list__open');
-			$('#menu-button').html("close");
+			$('#menu-button').html('×');
 			menuState = 1;
 		} else {
 			$('#nav--main-list').addClass('nav--main-list__close');
 			$('#nav--main-list').removeClass('nav--main-list__open');
 			$('#dropdown--content').addClass('dropdown--content__closed');
 			$('#dropdown--content').removeClass('dropdown--content__open');
-			$('#menu-button').html("menu");
+			$('#menu-button').html('≡');
 			menuState = 0;
 		}
 	});
