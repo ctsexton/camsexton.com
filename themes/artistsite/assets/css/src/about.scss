@@ -12,6 +12,15 @@
 	}
 }
 
+@media #{$large} {
+	.about--item {
+		max-width: 45%;
+		&__wide {
+			max-width: 75%;
+		}
+	}
+}
+
 .img-span {
 	background: black;
 	position: fixed;
@@ -27,18 +36,16 @@
 	display: block;
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: -270px;
 	min-width: 1051px;
-	@media screen and (max-width: 600px) {
-		right: -270px;
+	@media #{$medium} {
+		right: -200px;
+	}
+	@media #{$large} {
+		right: -150px;
+	}
+	@media #{$huge} {
+		right: 0;
 	}
 }
 
-@media #{$large} {
-	.about--item {
-		max-width: 45%;
-		&__wide {
-			max-width: 75%;
-		}
-	}
-}
