@@ -83,15 +83,20 @@
 // CONTACT FORM PLUGIN
 .contact-form {
 	display: block;
-	padding: 30px;
-	width: 100%;
+	width: 95%;
+	padding: 15px;
 	max-width: 900px;
 	background: white;
 	box-shadow: 3px 3px 10px grey;
 	margin: 30px auto 0;
 	letter-spacing: 0.05em;
+	font-size: 90%;
 	font-weight: 200;
-	font-size: 100%;
+	@media #{$media-desktop} {
+		width: 100%;
+		font-size: 100%;
+		padding: 30px;
+	}
 	input[type="text"], textarea {
 		line-height: 150%;
 		font-size: 100%;
@@ -120,12 +125,6 @@
 			 color: black;
 			 border: 2px black solid;
 		 }
-	}
-	@media #{$media-mobile} {
-		width: 95%;
-		font-size: 90%;
-		padding: 15px;
-
 	}
 }
 
