@@ -20,8 +20,7 @@ git remote add origin https://github.com/ctsexton/camsexton.com.git
 ```
 5. At this point we need to import the new files and then reset the repo to HEAD in order to overwrite the files installed by composer and artisan.
 ```
-git fetch
-git reset origin/master --hard HEAD
+git pull
 ```
 6. Not sure if this command works/is necessary but then checkout master and track changes:
 ```
