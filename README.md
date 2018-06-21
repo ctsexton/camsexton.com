@@ -17,23 +17,18 @@ php artisan october:install
 ```
 git init
 git remote add origin https://github.com/ctsexton/camsexton.com.git
-```
-5. At this point we need to import the new files and then reset the repo to HEAD in order to overwrite the files installed by composer and artisan.
-```
 git pull
+git checkout -f origin/master
+git submodule update
 ```
-6. Not sure if this command works/is necessary but then checkout master and track changes:
-```
-git checkout origin/master
-```
-7. Run composer update on the new composer.json and optionally (for dev environment) install node modules with npm:
+5. Run composer update on the new composer.json and optionally (for dev environment) install node modules with npm:
 ```
 composer update
 npm install
 ```
-8. Convert to dotenv mode in order to use the API keys:
+6. Convert to dotenv mode in order to use the API keys:
 ```
 php artisan october:env
 ```
-9. At this point you should be good to go code-wise. You will need to manually copy over all files in storage/app for images, media etc. Also do not forget to manually copy over all plugins. If it all goes well and you transfer the database file then it should all be configured.
-10. You will also need to add the values for GCAL_API_KEY, GCAL_ID, & GCAL_TIMEZONE to your .env file.
+7. At this point you should be good to go code-wise. You will need to manually copy over all files in storage/app for images, media etc. Also do not forget to manually copy over all plugins. If it all goes well and you transfer the database file then it should all be configured.
+8. You will also need to add the values for GCAL_API_KEY, GCAL_ID, & GCAL_TIMEZONE to your .env file.
