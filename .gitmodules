@@ -1,0 +1,3 @@
+[submodule "plugins/camsexton/events"]
+	path = plugins/camsexton/events
+	url = https://github.com/ctsexton/events
