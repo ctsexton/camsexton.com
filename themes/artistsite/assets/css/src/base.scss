@@ -137,6 +137,12 @@ a {
 	}
 }
 
+.container-gutter {
+	padding: 15px;
+	@media #{$large} {
+		padding: 25px;
+	}
+}
 
 .item {
 	margin: 10px;
@@ -176,14 +182,29 @@ a {
 		font-size: 1rem;
 	}
 }
+ .item-centered {
+	 margin: 0 auto;
+ }
 
 .sticky {
 	background: white;
 	box-shadow: 5px 5px 20px #aaa;
 }
+ .spacer {
+	 display: block;
+	 min-height: 25px;
+	 width: 100%;
+	 @media #{$medium} {
+		 min-height: 50px;
+	 }
+ }
 
 .item-wide {
 	flex-basis: 75%;
+}
+
+.item-link {
+	text-decoration: underline;
 }
 
 .force-word-wrap {
