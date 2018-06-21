@@ -25,7 +25,7 @@ git reset origin/master --hard HEAD
 ```
 6. Not sure if this command works/is necessary but then checkout master and track changes:
 ```
-git checkout -t origin/master
+git checkout origin/master
 ```
 7. Run composer update on the new composer.json and optionally (for dev environment) install node modules with npm:
 ```
