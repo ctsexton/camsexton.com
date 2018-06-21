@@ -31,4 +31,4 @@ npm install
 php artisan october:env
 ```
 7. At this point you should be good to go code-wise. You will need to manually copy over all files in storage/app for images, media etc. Also do not forget to manually copy over all plugins. If it all goes well and you transfer the database file then it should all be configured.
-8. You will also need to add the values for GCAL_API_KEY, GCAL_ID, & GCAL_TIMEZONE to your .env file.
+8. You will also need to add an API key (enabled for Google Calendar API) as GCAL_API_KEY to your .env file.
