@@ -1,0 +1,21 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+    url:
+        label: URL
+        type: text
+        searchable: true
+    code_url:
+        label: code_url
+        type: text
+        searchable: true
+    description:
+        label: description
+        type: text
+    sort_order:
+        label: sort_order
+        type: number
+        invisible: true
+        sortable: true

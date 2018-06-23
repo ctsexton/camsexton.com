@@ -1,0 +1,13 @@
+<div class="portfolio">
+	{% for sample in __SELF__.portfolio %}
+	<div class="sample">
+		<img src="{{ sample.sample_pic.getPath() }}" >
+		<div class="sample--text force-word-wrap">
+			<div class="sample--title">{{ sample.title }}</div>
+			<div class="sample--url"><b>URL:</b> <a href="{{ sample.url }}">{{ sample.url }}</a></div>
+			<div class="sample--url"><b>Code:</b> <a href="{{ sample.code_url }}">{{ sample.code_url }}</a></div>
+			<div class="sample--desc">{{ sample.description }}</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>

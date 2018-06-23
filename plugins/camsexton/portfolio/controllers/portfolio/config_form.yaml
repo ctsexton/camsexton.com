@@ -1,0 +1,10 @@
+name: Portfolio
+form: $/camsexton/portfolio/models/sample/fields.yaml
+modelClass: CamSexton\Portfolio\Models\Sample
+defaultRedirect: camsexton/portfolio/portfolio
+create:
+    redirect: 'camsexton/portfolio/portfolio/update/:id'
+    redirectClose: camsexton/portfolio/portfolio
+update:
+    redirect: camsexton/portfolio/portfolio
+    redirectClose: camsexton/portfolio/portfolio

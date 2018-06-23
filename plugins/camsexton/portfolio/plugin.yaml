@@ -1,0 +1,11 @@
+plugin:
+    name: 'camsexton.portfolio::lang.plugin.name'
+    description: 'camsexton.portfolio::lang.plugin.description'
+    author: 'Cam Sexton'
+    icon: oc-icon-pencil
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Portfolio
+        url: camsexton/portfolio/portfolio
+        icon: icon-pencil

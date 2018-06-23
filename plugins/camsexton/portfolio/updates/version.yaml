@@ -1,0 +1,11 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table camsexton_portfolio_'
+    - builder_table_create_camsexton_portfolio_.php
+1.0.3:
+    - 'Updated table camsexton_portfolio_'
+    - builder_table_update_camsexton_portfolio_items.php
+1.0.4:
+    - 'Updated table camsexton_portfolio_items'
+    - builder_table_update_camsexton_portfolio_items_2.php

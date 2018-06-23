@@ -1,0 +1,31 @@
+fields:
+    title:
+        label: Title
+        span: left
+        required: 1
+        type: text
+    url:
+        label: 'Page URL'
+        span: left
+        required: 1
+        type: text
+    code_url:
+        label: 'Code URL'
+        span: right
+        required: 0
+        type: text
+    description:
+        label: Description
+        size: small
+        span: full
+        type: textarea
+    sample_pic:
+        label: Screenshot
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload

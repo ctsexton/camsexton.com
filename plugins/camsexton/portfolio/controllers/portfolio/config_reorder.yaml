@@ -1,0 +1,5 @@
+title: Portfolio
+nameFrom: title
+modelClass: CamSexton\Portfolio\Models\Sample
+toolbar:
+    buttons: reorder_toolbar
