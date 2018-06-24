@@ -16,10 +16,16 @@
 	border-radius: 20px;
 	width: 300px;
 	margin: 7px;
+	img {
+		height: auto;
+	}
 	@media #{$medium} {
 		font-size: 1rem;
 		margin: 15px;
 		width: 600px;
+		img {
+			height: auto;
+		}
 	}
 	&--text {
 		padding: 0 10px 10px;
