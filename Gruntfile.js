@@ -7,14 +7,14 @@ module.exports = function(grunt) {
           style:'compressed'
         },
         files: {
-          'themes/artistsite/assets/css/styles_23.06.18.css' : 'themes/artistsite/assets/css/src/input.scss'
+          'themes/artistsite/assets/css/styles_25.06.18.css' : 'themes/artistsite/assets/css/src/input.scss'
         }
       }
     },
     autoprefixer:{
       dist:{
         files:{
-          'themes/artistsite/assets/css/styles_23.06.18.css':'themes/artistsite/assets/css/styles_23.06.18.css'
+          'themes/artistsite/assets/css/styles_25.06.18.css':'themes/artistsite/assets/css/styles_25.06.18.css'
         }
       }
     },
