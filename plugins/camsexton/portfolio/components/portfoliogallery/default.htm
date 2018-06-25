@@ -1,7 +1,7 @@
 <div class="portfolio">
 	{% for sample in __SELF__.portfolio %}
 	<div class="sample">
-		<img src="{{ sample.sample_pic.getPath() }}" >
+		<a href="{{ sample.url }}"><img src="{{ sample.sample_pic.getPath() }}"/></a>
 		<div class="sample--text force-word-wrap">
 			<div class="sample--title">{{ sample.title }}</div>
 			<div class="sample--url"><b>URL:</b> <a href="{{ sample.url }}">{{ sample.url }}</a></div>
